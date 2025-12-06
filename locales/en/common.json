@@ -90,6 +90,28 @@
     "button_primary": "Contact for Purchase Information",
     "button_secondary": "Apply for Distribution Partnership"
   },
+  "health": {
+    "title": "Health Center",
+    "subtitle": "Evidence-based insights on liver health, nutrition science, and wellness strategies for modern lifestyles",
+    "readMore": "Read more",
+    "articles": {
+      "article1": {
+        "tag": "Liver Health Basics",
+        "title": "Understanding Your Liver: The Body's Detox Powerhouse",
+        "excerpt": "Learn how your liver works around the clock to process nutrients, filter toxins, and maintain optimal health."
+      },
+      "article2": {
+        "tag": "Late Nights & Liver",
+        "title": "How Sleep Deprivation Affects Liver Function",
+        "excerpt": "Discover the science behind late-night work and social drinking, and how to support your liver during demanding periods."
+      },
+      "article3": {
+        "tag": "Ingredients & Science",
+        "title": "Broccoli Sprouts: Nature's Liver Protection Secret",
+        "excerpt": "Explore the research-backed benefits of sulforaphane and why broccoli sprouts are a game-changer for liver wellness."
+      }
+    }
+  },
   "products": {
     "title": "Our Flagship Liver Support Formula",
     "subtitle": "Premium broccoli sprout extract combined with science-backed ingredients for optimal daily liver wellness",
@@ -130,6 +152,148 @@
         "platforms": "Amazon Japan",
         "status": "Available via local partners"
       }
+    }
+  },
+  "glossary": {
+    "title": "Ingredient Glossary",
+    "subtitle": "Understanding the key ingredients in LivBoss and their scientifically-backed benefits for liver health",
+    "metaDescription": "Comprehensive guide to LivBoss ingredients including broccoli sprouts, B vitamins, and antioxidants for liver support",
+    "items": {
+      "broccoli": {
+        "name": "Broccoli Sprout Extract",
+        "description": "Rich in sulforaphane, a powerful compound that activates the body's natural detoxification pathways and protects liver cells from oxidative stress. Clinical studies show it supports Phase II liver detoxification."
+      },
+      "bcomplex": {
+        "name": "B-Complex Vitamins",
+        "description": "Essential for energy metabolism and liver function. B vitamins (B1, B2, B6, B12) help the liver process fats, proteins, and carbohydrates while supporting cellular energy production."
+      },
+      "milkthistle": {
+        "name": "Milk Thistle Extract (Silymarin)",
+        "description": "Contains silymarin, a flavonoid complex that protects liver cell membranes, promotes regeneration, and supports healthy bile flow. Used for centuries in traditional medicine."
+      },
+      "turmeric": {
+        "name": "Turmeric Extract (Curcumin)",
+        "description": "Curcumin is a potent anti-inflammatory and antioxidant compound that supports liver health by reducing oxidative damage and promoting healthy inflammatory response."
+      },
+      "nac": {
+        "name": "N-Acetyl Cysteine (NAC)",
+        "description": "A precursor to glutathione, the body's master antioxidant. NAC replenishes glutathione stores in the liver, essential for detoxification and cellular protection."
+      },
+      "alphalipoic": {
+        "name": "Alpha-Lipoic Acid",
+        "description": "A universal antioxidant that works in both water and fat-soluble environments. Supports liver detoxification and helps regenerate other antioxidants like vitamins C and E."
+      },
+      "selenium": {
+        "name": "Selenium",
+        "description": "An essential trace mineral that supports glutathione peroxidase, a key enzyme in the liver's antioxidant defense system."
+      },
+      "zinc": {
+        "name": "Zinc",
+        "description": "Critical for liver enzyme function, immune support, and cellular repair. Zinc deficiency can impair liver function and regeneration capacity."
+      }
+    }
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Frequently asked questions about LivBoss liver support formula",
+    "metaDescription": "Find answers to common questions about LivBoss usage, dosage, safety, and liver health support",
+    "faq": {
+      "q1": "Who should take LivBoss?",
+      "a1": "LivBoss is designed for adults who want to support their liver health, especially those with demanding lifestyles including late-night work, social drinking, high stress, or long-term medication use. It's also suitable for anyone seeking daily liver wellness support. Consult your healthcare provider if you have existing liver conditions or are pregnant/nursing.",
+      "q2": "How long should I take LivBoss?",
+      "a2": "LivBoss is formulated for long-term daily use as part of your wellness routine. Many users notice benefits within 2-4 weeks, but optimal results are achieved with consistent use over 2-3 months. The ingredients are safe for ongoing supplementation to maintain liver health.",
+      "q3": "Can I take LivBoss with other medications?",
+      "a3": "While LivBoss contains natural ingredients, some may interact with certain medications. Always consult your healthcare provider or pharmacist before starting any new supplement, especially if you take prescription medications or have existing health conditions.",
+      "q4": "Is LivBoss suitable for long-term use?",
+      "a4": "Yes, LivBoss is formulated with ingredients that are safe and beneficial for long-term daily use. All ingredients are dosed at levels supported by clinical research for ongoing supplementation. Regular liver support can be an important part of maintaining optimal health.",
+      "q5": "What is the recommended dosage?",
+      "a5": "Follow the dosage instructions on the product label. Typically, take as directed with meals for optimal absorption. Do not exceed the recommended daily amount unless advised by a healthcare professional.",
+      "q6": "Are there any side effects?",
+      "a6": "LivBoss is generally well-tolerated. Some individuals may experience mild digestive changes when first starting. If you experience any adverse effects, discontinue use and consult your healthcare provider. Not suitable for individuals allergic to any of the ingredients.",
+      "q7": "Where is LivBoss available?",
+      "a7": "LivBoss is available through select online marketplaces and local partners depending on your region. Visit our 'Where to Buy' section for current availability in Southeast Asia, Mainland China, Japan, and other markets.",
+      "q8": "How should I store LivBoss?",
+      "a8": "Store in a cool, dry place away from direct sunlight. Keep the container tightly closed. Do not refrigerate unless specified on the label. Keep out of reach of children."
+    }
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "subtitle": "Please read these terms carefully before using our website or purchasing our products",
+    "metaDescription": "LivBoss terms and conditions for website use and product purchases",
+    "lastUpdated": "Last updated: December 2024",
+    "section1": {
+      "title": "1. Acceptance of Terms",
+      "body": "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these terms, please do not use this website or purchase our products."
+    },
+    "section2": {
+      "title": "2. Use of Website",
+      "body": "This website is intended for informational and commercial purposes. You may not use this site for any illegal or unauthorized purpose. You must not transmit any viruses or malicious code. We reserve the right to refuse service, terminate accounts, or cancel orders at our discretion."
+    },
+    "section3": {
+      "title": "3. Product Information",
+      "body": "We strive to provide accurate product descriptions and information. However, we do not warrant that product descriptions or other content on this site is accurate, complete, reliable, current, or error-free. Product packaging may vary from images shown."
+    },
+    "section4": {
+      "title": "4. No Medical Advice",
+      "body": "The information provided on this website is for general informational purposes only and is not intended as medical advice. Always consult with a qualified healthcare provider before starting any new supplement regimen, especially if you have pre-existing health conditions or take medications. The products have not been evaluated by regulatory authorities to diagnose, treat, cure, or prevent any disease."
+    },
+    "section5": {
+      "title": "5. Limitation of Liability",
+      "body": "To the maximum extent permitted by law, LivBoss and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the website or products. We do not guarantee specific health outcomes."
+    },
+    "section6": {
+      "title": "6. Intellectual Property",
+      "body": "All content on this website, including text, graphics, logos, and images, is the property of LivBoss or its content suppliers and is protected by international copyright laws. You may not reproduce, distribute, or use any content without express written permission."
+    },
+    "section7": {
+      "title": "7. Changes to Terms",
+      "body": "We reserve the right to update or modify these terms at any time without prior notice. Your continued use of the website following any changes constitutes acceptance of those changes. Please review these terms periodically."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "How we collect, use, and protect your personal information",
+    "metaDescription": "LivBoss privacy policy - learn how we handle your personal data and protect your privacy",
+    "lastUpdated": "Last updated: December 2024",
+    "section1": {
+      "title": "1. Information We Collect",
+      "body": "We collect information you provide directly to us, such as when you create an account, make a purchase, subscribe to our newsletter, or contact customer support. This may include your name, email address, shipping address, phone number, and payment information. We also automatically collect certain information about your device and how you interact with our website, including IP address, browser type, and pages visited."
+    },
+    "section2": {
+      "title": "2. How We Use Your Information",
+      "body": "We use the information we collect to process orders, communicate with you about your purchases, provide customer support, send marketing communications (with your consent), improve our website and services, prevent fraud and enhance security, and comply with legal obligations. We do not sell your personal information to third parties."
+    },
+    "section3": {
+      "title": "3. Information Sharing",
+      "body": "We may share your information with service providers who assist us with business operations (such as payment processing, shipping, and email delivery), when required by law or to protect our rights, and in connection with any merger, sale, or transfer of our business. All third-party service providers are required to maintain the confidentiality of your information."
+    },
+    "section4": {
+      "title": "4. Cookies and Tracking",
+      "body": "We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookie settings through your browser, but disabling cookies may affect website functionality. We may use analytics services like Google Analytics to understand how users interact with our site."
+    },
+    "section5": {
+      "title": "5. Data Security",
+      "body": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security."
+    },
+    "section6": {
+      "title": "6. Your Rights",
+      "body": "Depending on your location, you may have rights to access, correct, delete, or restrict the use of your personal information. You can opt out of marketing communications at any time by clicking the unsubscribe link in our emails or contacting us directly. For privacy-related inquiries or to exercise your rights, please contact us at privacy@livboss.com."
+    },
+    "section7": {
+      "title": "7. International Transfers",
+      "body": "Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with applicable data protection laws."
+    },
+    "section8": {
+      "title": "8. Children's Privacy",
+      "body": "Our website and products are not intended for children under 18 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately."
+    },
+    "section9": {
+      "title": "9. Changes to This Policy",
+      "body": "We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the 'Last Updated' date. Your continued use of our website after changes constitutes acceptance of the updated policy."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "body": "If you have any questions about this privacy policy or our data practices, please contact us at: privacy@livboss.com"
     }
   },
   "footer": {

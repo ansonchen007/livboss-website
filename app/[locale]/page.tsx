@@ -4,10 +4,11 @@ import {locales} from '@/i18n';
 import HomePageClient from './HomePageClient';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{locale: string}>;
 };
 
-export async function generateMetadata({params: {locale}}: Props): Promise<Metadata> {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
   const t = await getTranslations({locale});
   
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://livboss.com';

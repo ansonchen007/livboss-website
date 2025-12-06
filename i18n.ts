@@ -21,13 +21,19 @@ export const localeMapping: Record<string, Locale> = {
   'ja': 'ja',
 };
 
-export default getRequestConfig(async ({locale}) => {
-  // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as Locale)) notFound();
+export default getRequestConfig(async ({requestLocale}) => {
+  // This typically corresponds to the `[locale]` segment
+  let locale = await requestLocale;
+
+  // Ensure that the incoming `locale` parameter is valid
+  if (!locale || !locales.includes(locale as Locale)) {
+    locale = 'en';
+  }
 
   const mappedLocale = locale === 'zh' ? 'zh-CN' : locale;
 
   return {
+    locale,
     messages: (await import(`./locales/${mappedLocale}/common.json`)).default
   };
 });

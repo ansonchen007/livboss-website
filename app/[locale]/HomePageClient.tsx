@@ -5,6 +5,7 @@ import {useTranslations} from 'next-intl';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProductsSection from '@/components/ProductsSection';
+import HealthCenterSection from '@/components/HealthCenterSection';
 import BuySection from '@/components/BuySection';
 
 export default function HomePageClient() {
@@ -55,22 +56,11 @@ export default function HomePageClient() {
       {/* Products Section */}
       <ProductsSection />
       
+      {/* Health Center Section */}
+      <HealthCenterSection />
+      
       {/* Buy Section */}
       <BuySection />
-      
-      {/* Health Center Section - Placeholder */}
-      <section id="health-center" className="py-24 px-6 bg-gradient-to-br from-paper-bg to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-deep-brown mb-4 tracking-wide">
-              Health Center
-            </h2>
-            <p className="text-xl text-text-primary/70 max-w-2xl mx-auto">
-              Educational content and resources coming soon
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
