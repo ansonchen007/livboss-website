@@ -5,9 +5,7 @@ import {locales} from '@/i18n';
 import Footer from '@/components/Footer';
 import '../globals.css';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-}
+export const runtime = 'edge';
 
 export default async function LocaleLayout({
   children,
