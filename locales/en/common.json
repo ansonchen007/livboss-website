@@ -1,0 +1,153 @@
+{
+  "brand": {
+    "name": "LivBoss",
+    "tagline": "Empower Your Liver"
+  },
+  "nav": {
+    "products": "LivBoss Products",
+    "healthCenter": "Health Center",
+    "buy": "Buy"
+  },
+  "hero": {
+    "label": "Liver Wellness",
+    "title": "Broccoli Sprout Formula",
+    "subtitle": "Nature's Most Powerful Liver Protection",
+    "ctaPrimary": "Discover More",
+    "ctaSecondary": "View Science"
+  },
+  "why": {
+    "title": "Why Liver Protection",
+    "subtitle": "Modern lifestyle puts multiple pressures on the liver",
+    "reason_1_title": "Late Nights",
+    "reason_1_desc": "Disrupts liver repair rhythm",
+    "reason_2_title": "Social Drinking",
+    "reason_2_desc": "Increases liver metabolic burden",
+    "reason_3_title": "High-Stress Work",
+    "reason_3_desc": "Emotions affect liver function",
+    "reason_4_title": "Long-term Medication",
+    "reason_4_desc": "Drug metabolism damages liver cells"
+  },
+  "benefits": {
+    "title": "Core Product Benefits",
+    "subtitle": "Carefully developed for more effective liver protection",
+    "benefit_1_title": "Scientific Formula · Effective Doses",
+    "benefit_1_desc": "Based on international research, each serving reaches effective dosage standards, truly effective not placebo.",
+    "benefit_2_title": "Premium Ingredients · Quality Traceability",
+    "benefit_2_desc": "Global premium sourcing with third-party certification, ensuring safety and purity of every batch.",
+    "benefit_3_title": "Daily Support · Easy to Maintain",
+    "benefit_3_desc": "Simple intake method, integrates into daily life, no complex steps, more effective with long-term consistency.",
+    "benefit_4_title": "For Multiple Groups",
+    "benefit_4_desc": "Whether working late, frequent socializing, or high-stress work, provides targeted liver nutritional support."
+  },
+  "ingredients": {
+    "title": "Ingredients & Science",
+    "subtitle": "Every ingredient backed by science",
+    "intro_title": "The Golden Combination for Liver Protection",
+    "intro_p1": "Our formula is based on multiple international clinical studies, selecting natural active ingredients with liver-protective efficacy, scientifically proportioned to work synergistically, providing comprehensive nutritional support for the liver.",
+    "intro_p2": "Each ingredient has undergone rigorous safety and efficacy validation, ensuring both safety and effectiveness in daily use.",
+    "ingredient_1_name": "Milk Thistle Extract",
+    "ingredient_1_desc": "Contains active ingredient silymarin, clinically proven to protect liver cell membranes, promote liver detoxification, and reduce free radical damage.",
+    "ingredient_2_name": "Curcumin",
+    "ingredient_2_desc": "Powerful antioxidant component that helps reduce liver inflammation and supports the liver's ability to metabolize fats.",
+    "ingredient_3_name": "N-Acetyl Cysteine (NAC)",
+    "ingredient_3_desc": "Promotes glutathione synthesis, enhances liver detoxification capacity, with good auxiliary effects on alcohol and drug metabolism.",
+    "ingredient_4_name": "B-Complex Vitamins",
+    "ingredient_4_desc": "Participates in liver energy metabolism, supports liver cell repair and regeneration, maintains normal liver physiological functions."
+  },
+  "usage": {
+    "title": "How to Use & Safety",
+    "subtitle": "Simple 3 steps, integrate into daily life",
+    "step_1_title": "Daily Intake",
+    "step_1_desc": "2 times daily, 2 capsules each time\nRecommended morning and evening",
+    "step_2_title": "Best Time",
+    "step_2_desc": "Recommended after meals\nTake with warm water",
+    "step_3_title": "Continuous Use",
+    "step_3_desc": "Recommended for 3 months\nMore noticeable effects",
+    "safety_title": "Safety Notice:",
+    "safety_desc": "This product is a nutritional supplement and cannot replace medical treatment. If you have liver disease or are taking other medications, please consult a doctor before use. Pregnant women, nursing mothers, and children should use under medical supervision."
+  },
+  "testimonials": {
+    "title": "User Reviews",
+    "subtitle": "Feedback from real users",
+    "review_1_role": "Tech Professional",
+    "review_1_content": "Often working late and overtime, always feeling tired. After taking it for two months, I noticeably feel more energetic, and my health check results have improved.",
+    "review_2_role": "Sales Executive",
+    "review_2_content": "My job requires frequent business entertaining and drinking, very worried about liver health. Now I take it daily, feel I recover faster the next day, and my body burden is much less.",
+    "review_3_role": "Business Manager",
+    "review_3_content": "When stressed, I easily get liver heat and poor sleep quality. After taking it for a while, my overall condition has improved a lot, and my family says my complexion has gotten better."
+  },
+  "about": {
+    "title": "About LivBoss",
+    "intro": "LivBoss is a premium nutrition brand focused on liver health",
+    "p1": "We understand the health challenges modern people face: fast-paced work, frequent socializing, irregular schedules - all invisibly putting tremendous pressure on the liver. As the body's most important metabolic organ, liver health directly affects our overall condition and quality of life.",
+    "p2": "Based on this insight, we have partnered with international nutrition experts and medical research institutions, using scientific research as the foundation, selecting premium ingredients from around the world, to create a truly effective liver protection formula. We adhere to high standards of quality control, with every batch of products undergoing rigorous third-party testing and certification.",
+    "mission_title": "Our Mission",
+    "mission_desc": "is to ensure that everyone working hard for life can have a healthy liver, thereby having a better state to face work and life challenges."
+  },
+  "cta": {
+    "title": "Start Now\nGive Your Liver A Break",
+    "subtitle": "Scientific liver protection starts today",
+    "button_primary": "Contact for Purchase Information",
+    "button_secondary": "Apply for Distribution Partnership"
+  },
+  "products": {
+    "title": "Our Flagship Liver Support Formula",
+    "subtitle": "Premium broccoli sprout extract combined with science-backed ingredients for optimal daily liver wellness",
+    "main": {
+      "name": "LivBoss Broccoli Sprout Liver Support",
+      "description": "Our flagship formula combines patented broccoli sprout extract with essential nutrients to provide comprehensive liver protection. Designed for modern lifestyles with late nights, social drinking, and high stress.",
+      "benefit1": "Rich in sulforaphane from broccoli sprout extract",
+      "benefit2": "Supports liver function during late-night work and social drinking",
+      "benefit3": "Transparent, science-based formulation with clinical dosages",
+      "benefit4": "Easy to integrate into your daily wellness routine"
+    },
+    "badges": {
+      "broccoli": "Broccoli Sprout Extract",
+      "bvitamins": "B Vitamins",
+      "antioxidant": "Antioxidant Support",
+      "noSugar": "No Sugar",
+      "noCaffeine": "No Caffeine"
+    }
+  },
+  "buy": {
+    "title": "Where to Buy LivBoss",
+    "subtitle": "Choose your preferred platform based on your region",
+    "ctaPrimary": "Contact us for purchase channels",
+    "ctaSecondary": "Apply for partnership / distribution",
+    "marketplaces": {
+      "sea": {
+        "name": "Southeast Asia",
+        "platforms": "Lazada / Shopee",
+        "status": "Coming soon"
+      },
+      "cn": {
+        "name": "Mainland China",
+        "platforms": "Taobao / JD.com",
+        "status": "Coming soon"
+      },
+      "jp": {
+        "name": "Japan",
+        "platforms": "Amazon Japan",
+        "status": "Available via local partners"
+      }
+    }
+  },
+  "footer": {
+    "followUs": "Follow us on social media",
+    "about": "About Us",
+    "aboutText1": "LivBoss is dedicated to providing premium, science-backed liver health solutions. Our flagship product combines patented broccoli sprout extract with cutting-edge nutritional science.",
+    "aboutText2": "We believe in transparency, quality, and the power of nature supported by rigorous research to help you achieve optimal wellness.",
+    "glossary": "Ingredient Glossary",
+    "help": "Help Center",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "© LivBoss Wellness Ltd {year}. All rights reserved."
+  },
+  "language": {
+    "current": "EN",
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語"
+  },
+  "cta_header": "Learn More"
+}
