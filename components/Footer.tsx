@@ -115,7 +115,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center text-sm text-gray-500 pt-8 border-t border-gray-800">
-            <p>{t('copyright').replace('{year}', currentYear.toString())}</p>
+            <p>{t('copyright', { year: currentYear })}</p>
           </div>
         </div>
       </div>
