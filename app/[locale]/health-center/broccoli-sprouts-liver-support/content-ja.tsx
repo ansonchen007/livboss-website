@@ -1,19 +1,6 @@
 export default function ContentJA() {
   return (
     <>
-      <header className="mb-12">
-        <div className="inline-block px-4 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-4">
-          科学的詳細分析
-        </div>
-        <h1 className="text-4xl md:text-5xl font-light text-deep-brown mb-6 leading-tight">
-          ブロッコリースプラウトと肝臓の日常サポート：科学的レビュー
-        </h1>
-        <p className="text-text-primary/70 text-lg leading-relaxed">
-          ブロッコリースプラウト、スルフォラファン、そして肝臓健康との科学的関係を深く探ります。臨床試験データと安全性の考慮事項を含みます。
-        </p>
-      </header>
-
-      <div className="prose prose-lg max-w-none">
         {/* セクション1：なぜ注目されているのか */}
         <section className="mb-12">
           <h2 className="text-3xl font-light text-deep-brown mb-6 border-b border-champagne-gold/30 pb-3">
@@ -286,7 +273,6 @@ export default function ContentJA() {
             本記事の内容は教育目的および一般的な参考のためのものであり、医学的アドバイスや専門的指導を構成するものではありません。言及された研究結果は、サンプルサイズや方法論の違いなどにより限界がある可能性があります。ブロッコリースプラウトまたは関連サプリメントの使用を検討する前に、読者は資格のある医療専門家に相談してください。LivBossおよび本記事の著者は、本記事の情報の使用から生じる直接的または間接的な結果について一切の責任を負いません。
           </p>
         </section>
-      </div>
     </>
   );
 }

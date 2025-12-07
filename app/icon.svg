@@ -1,0 +1,44 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+
+  <!-- Inner frame (thicker) -->
+  <rect
+    x="96"
+    y="96"
+    width="320"
+    height="320"
+    fill="none"
+    stroke="#C6A664"
+    stroke-width="10"
+    rx="28"
+    ry="28"
+  />
+
+  <!-- Outer frame, offset 12px to bottom-right (thicker) -->
+  <rect
+    x="108"
+    y="108"
+    width="320"
+    height="320"
+    fill="none"
+    stroke="#C6A664"
+    stroke-width="10"
+    rx="28"
+    ry="28"
+  />
+
+  <!-- Center letter L (maximum size) -->
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Cinzel, serif"
+    font-size="420"
+    fill="#C6A664"
+    font-weight="bold"
+    letter-spacing="0"
+  >
+    L
+  </text>
+</svg>

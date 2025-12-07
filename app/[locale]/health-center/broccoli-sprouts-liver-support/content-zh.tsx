@@ -1,19 +1,6 @@
 export default function ContentZH() {
   return (
     <>
-      <header className="mb-12">
-        <div className="inline-block px-4 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-4">
-          科学深度解读
-        </div>
-        <h1 className="text-4xl md:text-5xl font-light text-deep-brown mb-6 leading-tight">
-          西兰花芽与肝脏日常支持（科普文章）
-        </h1>
-        <p className="text-text-primary/70 text-lg leading-relaxed">
-          深入探讨西兰花芽、萝卜硫素与肝脏健康之间的科学关系。包含临床试验数据和安全性注意事项。
-        </p>
-      </header>
-
-      <div className="prose prose-lg max-w-none">
         {/* 第1节：为什么大家开始关注西兰花芽？ */}
         <section className="mb-12">
           <h2 className="text-3xl font-light text-deep-brown mb-6 border-b border-champagne-gold/30 pb-3">
@@ -617,7 +604,6 @@ export default function ContentZH() {
             本文内容仅供科普和一般性参考，不构成任何医疗建议或专业指导。文中提及的研究结果可能因样本量、方法学差异等原因存在局限性。读者在考虑使用西兰花芽或相关补充剂前，应咨询合格的医疗专业人员。LivBoss及本文作者不对因使用本文信息而产生的任何直接或间接后果承担责任。
           </p>
         </section>
-      </div>
     </>
   );
 }

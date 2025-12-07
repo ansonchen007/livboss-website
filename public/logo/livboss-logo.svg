@@ -1,0 +1,12 @@
+<svg width="800" height="533" viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg">
+  <!-- Inner frame -->
+  <rect x="150" y="192" width="500" height="142" fill="none" stroke="#C6A664" stroke-width="4"/>
+
+  <!-- Outer frame, offset by 8px to bottom-right -->
+  <rect x="158" y="200" width="500" height="142" fill="none" stroke="#C6A664" stroke-width="4"/>
+
+  <!-- LIVBOSS text -->
+  <text x="400" y="307" text-anchor="middle" font-family="Cinzel, serif" font-size="100" fill="#C6A664" font-weight="bold" letter-spacing="2">
+    LIVBOSS
+  </text>
+</svg>

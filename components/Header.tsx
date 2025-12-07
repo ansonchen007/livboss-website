@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import {useTranslations} from 'next-intl';
 import {useParams} from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
@@ -13,6 +14,7 @@ interface HeaderProps {
 
 export default function Header({isActive, onHoverChange}: HeaderProps) {
   const t = useTranslations('nav');
+  const tHeader = useTranslations('header');
   const params = useParams();
   const locale = params.locale as string || 'en';
   const [isMobile, setIsMobile] = useState(false);
@@ -78,26 +80,25 @@ export default function Header({isActive, onHoverChange}: HeaderProps) {
 
           {/* Center: Brand Logo */}
           <Link href={getLocalizedPath('/')} className="absolute left-1/2 -translate-x-1/2 hidden lg:block">
-            <svg width="200" height="133" viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg" className="transition-all duration-300">
-              {/* 内框：下边距进一步收紧 */}
-              <rect x="150" y="192" width="500" height="142" fill="none" stroke={isMobile || isActive ? '#C6A664' : '#FFFFFF'} strokeWidth="4"/>
-              {/* 外框：保持右下错位 8px */}
-              <rect x="158" y="200" width="500" height="142" fill="none" stroke={isMobile || isActive ? '#C6A664' : '#FFFFFF'} strokeWidth="4"/>
-              {/* LIVBOSS 字样：下移至光学居中 */}
-              <text x="400" y="307" textAnchor="middle" fontFamily="Cinzel, serif" fontSize="100" fill={isMobile || isActive ? '#C6A664' : '#FFFFFF'} fontWeight="bold" letterSpacing="2">LIVBOSS</text>
-            </svg>
+            <Image
+              src="/logo/livboss-logo.svg"
+              alt={tHeader('logoAlt')}
+              width={200}
+              height={133}
+              className={`transition-all duration-300 ${isMobile || isActive ? '' : 'brightness-0 invert'}`}
+              priority
+            />
           </Link>
 
           {/* Mobile: Center brand */}
           <Link href={getLocalizedPath('/')} className="flex lg:hidden items-center justify-center flex-1">
-            <svg width="120" height="80" viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg">
-              {/* 内框：下边距进一步收紧 */}
-              <rect x="150" y="192" width="500" height="142" fill="none" stroke="#C6A664" strokeWidth="4"/>
-              {/* 外框：保持右下错位 8px */}
-              <rect x="158" y="200" width="500" height="142" fill="none" stroke="#C6A664" strokeWidth="4"/>
-              {/* LIVBOSS 字样：下移至光学居中 */}
-              <text x="400" y="307" textAnchor="middle" fontFamily="Cinzel, serif" fontSize="100" fill="#C6A664" fontWeight="bold" letterSpacing="2">LIVBOSS</text>
-            </svg>
+            <Image
+              src="/logo/livboss-logo.svg"
+              alt={tHeader('logoAlt')}
+              width={120}
+              height={80}
+              priority
+            />
           </Link>
 
           {/* Right: Buy Button + Language Switcher */}

@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import Script from 'next/script';
 import DoubleFrameCard from '@/components/DoubleFrameCard';
 import Header from '@/components/Header';
 
@@ -54,6 +55,17 @@ export async function generateMetadata({ params }: Props) {
       canonical: currentUrl,
       languages: alternateLanguages,
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 
@@ -61,10 +73,39 @@ export default async function ProductsPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'productsPage' });
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.livboss.com';
+
+  // Product schema for SEO
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "LivBoss Broccoli Sprout Liver Support",
+    "description": "Premium dietary supplement featuring high-potency broccoli sprout extract combined with scientifically-validated nutrients to support liver health and daily wellness. Our flagship formula provides clinically-researched doses of ingredients that support the liver's natural detoxification pathways.",
+    "brand": {
+      "@type": "Brand",
+      "name": "LivBoss"
+    },
+    "image": `${baseUrl}/images/products/livboss-main.png`, // TODO: Replace with actual product image path
+    "url": `${baseUrl}/products`,
+    "sku": "LIVBOSS-BROCCOLI-SPROUT",
+    "category": "DietarySupplement",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder"
+    }
+  };
+
   const ingredientKeys = ['broccoli', 'bcomplex', 'milkthistle', 'nac', 'alphalipoic'];
 
   return (
     <>
+      <Script
+        id="product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema)
+        }}
+      />
       <Header isActive={true} />
       <div className="min-h-screen bg-white pt-32 pb-20 px-6">
         <div className="max-w-[1280px] mx-auto">

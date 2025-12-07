@@ -1,11 +1,16 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import {useParams} from 'next/navigation';
 import Link from 'next/link';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const params = useParams();
+  const locale = params.locale as string;
   const currentYear = new Date().getFullYear();
+  
+  const localePath = locale === 'en' ? '' : `/${locale}`;
 
   const socialLinks = [
     {
@@ -56,10 +61,11 @@ export default function Footer() {
   ];
 
   const footerLinks = [
-    { href: '/glossary', label: t('glossary') },
-    { href: '/help', label: t('help') },
-    { href: '/terms', label: t('terms') },
-    { href: '/privacy', label: t('privacy') }
+    { href: `${localePath}/contact`, label: t('contact') },
+    { href: `${localePath}/glossary`, label: t('glossary') },
+    { href: `${localePath}/help`, label: t('help') },
+    { href: `${localePath}/terms`, label: t('terms') },
+    { href: `${localePath}/privacy`, label: t('privacy') }
   ];
 
   return (

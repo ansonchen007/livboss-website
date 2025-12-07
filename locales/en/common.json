@@ -8,6 +8,9 @@
     "healthCenter": "Health Center",
     "buy": "Buy"
   },
+  "header": {
+    "logoAlt": "LivBoss logo with double-frame design"
+  },
   "hero": {
     "label": "Liver Wellness",
     "title": "Let your liver breathe a little",
@@ -101,6 +104,18 @@
     "readMore": "Read more",
     "metaTitle": "Health Center - Liver Wellness Insights | LivBoss",
     "metaDescription": "Evidence-based articles on liver health, broccoli sprouts, detoxification, and wellness strategies for modern lifestyles.",
+    "article": {
+      "backToList": "Back to Health Center",
+      "readTime": "read",
+      "published": "Published"
+    },
+    "articleCta": {
+      "title": "Want to learn more about our broccoli sprout liver support formula?",
+      "button": "View Products"
+    },
+    "related": {
+      "title": "You may also like"
+    },
     "articles": {
       "readMore": "Read more",
       "article1": {
@@ -334,6 +349,30 @@
       "body": "If you have any questions about this privacy policy or our data practices, please contact us at: privacy@livboss.com"
     }
   },
+  "contactPage": {
+    "metaTitle": "Contact LivBoss - Business Inquiries & Support",
+    "metaDescription": "Get in touch with LivBoss for purchase enquiries, distribution partnerships, or professional collaboration. We're here to help.",
+    "title": "Contact LivBoss",
+    "subtitle": "For purchase enquiries, distribution partnerships or media collaboration, please use the form below or contact us by email. We will get back to you as soon as we can.",
+    "sections": {
+      "businessTitle": "Business & distribution",
+      "businessBody": "Wholesalers, distributors, online marketplaces and retail partners who are interested in LivBoss Broccoli Sprout Liver Support.",
+      "medicalTitle": "Healthcare & professional",
+      "medicalBody": "Healthcare professionals who would like more detailed product information or to explore educational collaboration.",
+      "consumerTitle": "Consumer enquiries",
+      "consumerBody": "If you have questions about how to use LivBoss in daily life, please read our Help Center first. For other questions you can also contact us by email."
+    },
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "regionLabel": "Region / Market",
+      "messageLabel": "Message",
+      "submit": "Send message",
+      "note": "By submitting this form you agree that we may contact you regarding your enquiry. For personal data details, please see our Privacy Policy.",
+      "successMessage": "Thank you for your message! We will get back to you soon."
+    },
+    "emailLabel": "Business email"
+  },
   "productsPage": {
     "title": "LivBoss Broccoli Sprout Liver Support",
     "subtitle": "A premium liver support supplement featuring concentrated broccoli sprout actives, designed for people who face late nights, social drinking, or long-term medication",
@@ -416,6 +455,7 @@
     "about": "About Us",
     "aboutText1": "LivBoss is dedicated to providing premium, science-backed liver health solutions. Our flagship product combines patented broccoli sprout extract with cutting-edge nutritional science.",
     "aboutText2": "We believe in transparency, quality, and the power of nature supported by rigorous research to help you achieve optimal wellness.",
+    "contact": "Contact",
     "glossary": "Ingredient Glossary",
     "help": "Help Center",
     "terms": "Terms & Conditions",

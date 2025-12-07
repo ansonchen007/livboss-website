@@ -1,19 +1,6 @@
 export default function ContentEN() {
   return (
     <>
-      <header className="mb-12">
-        <div className="inline-block px-4 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-4">
-          Scientific Deep Dive
-        </div>
-        <h1 className="text-4xl md:text-5xl font-light text-deep-brown mb-6 leading-tight">
-          Broccoli Sprouts and Liver Daily Support: A Scientific Review
-        </h1>
-        <p className="text-text-primary/70 text-lg leading-relaxed">
-          An in-depth exploration of the science behind broccoli sprouts, sulforaphane, and their relationship with liver health, including clinical trial data and safety considerations.
-        </p>
-      </header>
-
-      <div className="prose prose-lg max-w-none">
         {/* Section 1: Why the Growing Interest? */}
         <section className="mb-12">
           <h2 className="text-3xl font-light text-deep-brown mb-6 border-b border-champagne-gold/30 pb-3">
@@ -614,10 +601,9 @@ export default function ContentEN() {
         <section className="mt-12 p-6 bg-gray-100 border-l-4 border-gray-400 rounded-r-lg">
           <h3 className="text-lg font-medium text-gray-800 mb-3">Disclaimer</h3>
           <p className="text-gray-700 text-sm leading-relaxed">
-            The content of this article is for educational and general reference purposes only and does not constitute medical advice or professional guidance. Research results mentioned may have limitations due to sample size, methodological differences, and other factors. Before considering the use of broccoli sprouts or related supplements, readers should consult qualified healthcare professionals. LivBoss and the author of this article assume no responsibility for any direct or indirect consequences arising from the use of information in this article.
+            The content of this article is for educational purposes and general reference only and does not constitute medical advice or professional guidance. The research findings mentioned may have limitations due to sample size, methodological differences, and other factors. Readers should consult a qualified healthcare professional before considering the use of broccoli sprouts or related supplements. LivBoss and the author(s) of this article assume no responsibility for any direct or indirect consequences arising from the use of the information in this article.
           </p>
         </section>
-      </div>
     </>
   );
 }

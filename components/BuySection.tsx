@@ -1,10 +1,15 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import {useParams} from 'next/navigation';
 import Link from 'next/link';
 
 export default function BuySection() {
   const t = useTranslations('buy');
+  const params = useParams();
+  const locale = params.locale as string;
+  
+  const contactPath = locale === 'en' ? '/contact' : `/${locale}/contact`;
 
   const marketplaces = [
     {
@@ -43,13 +48,13 @@ export default function BuySection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Link
-            href="#contact"
+            href={contactPath}
             className="px-8 py-4 bg-primary text-white hover:bg-primary-dark rounded-xl font-semibold text-center transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {t('ctaPrimary')}
           </Link>
           <Link
-            href="#contact"
+            href={contactPath}
             className="px-8 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold text-center transition-all duration-300"
           >
             {t('ctaSecondary')}

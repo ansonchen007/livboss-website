@@ -8,6 +8,9 @@
     "healthCenter": "健康中心",
     "buy": "购买"
   },
+  "header": {
+    "logoAlt": "LIVBOSS 双边框设计的品牌标志"
+  },
   "hero": {
     "label": "肝脏日常守护",
     "title": "让你的肝，轻松一点",
@@ -101,6 +104,18 @@
     "readMore": "阅读更多",
     "metaTitle": "健康中心 - 肝脏养护知识 | 肝动力",
     "metaDescription": "基于科学证据的肝脏健康、西兰花芽、解毒排毒和现代生活方式的健康策略文章。",
+    "article": {
+      "backToList": "返回健康中心",
+      "readTime": "阅读时间",
+      "published": "发布于"
+    },
+    "articleCta": {
+      "title": "想了解肝动力西兰花芽护肝配方的详细信息？",
+      "button": "查看产品"
+    },
+    "related": {
+      "title": "推荐阅读"
+    },
     "articles": {
       "readMore": "阅读更多",
       "article1": {
@@ -331,8 +346,32 @@
     },
     "contact": {
       "title": "联系我们",
-      "body": "如果您对本隐私政策或我们的数据处理有任何疑问，请通过以下方式联系我们：privacy@livboss.com"
+      "body": "如果您对本隐私政策或我们的数据处理方式有任何疑问，请通过以下邮箱与我们联系：privacy@livboss.com"
     }
+  },
+  "contactPage": {
+    "metaTitle": "联系 LivBoss 肝动力 - 商务咨询与支持",
+    "metaDescription": "如需咨询购买渠道、代理合作或专业合作，欢迎通过表单或邮件联系 LivBoss 肝动力团队。",
+    "title": "联系 LivBoss 肝动力",
+    "subtitle": "如需咨询购买渠道、代理合作或媒体与专业合作，请通过下方表单或邮件与我们联系，我们会尽快回复您。",
+    "sections": {
+      "businessTitle": "经销与渠道合作",
+      "businessBody": "欢迎各类批发商、经销商、电商平台及零售渠道就肝动力西兰花芽护肝配方的合作机会与我们沟通。",
+      "medicalTitle": "医疗与专业合作",
+      "medicalBody": "若您是医疗或营养专业人士，希望了解更详细的产品资料或进行科普合作，也欢迎与我们联系。",
+      "consumerTitle": "消费者咨询",
+      "consumerBody": "如有日常使用相关问题，建议您优先查阅「帮助中心」，如仍有疑问，可通过邮件或表单与我们取得联系。"
+    },
+    "form": {
+      "nameLabel": "姓名",
+      "emailLabel": "邮箱",
+      "regionLabel": "所在地区 / 市场",
+      "messageLabel": "留言内容",
+      "submit": "发送信息",
+      "note": "提交本表单即表示您同意我们就本次咨询事宜与您联系，更多个人信息相关说明请参阅隐私政策。",
+      "successMessage": "感谢您的留言！我们会尽快回复您。"
+    },
+    "emailLabel": "商务邮箱"
   },
   "productsPage": {
     "title": "肝动力·西兰花芽护肝配方",
@@ -416,6 +455,7 @@
     "about": "关于我们",
     "aboutText1": "肝动力致力于提供优质、科学支持的肝脏健康解决方案。我们的旗舰产品结合了专利西兰花芽提取物和前沿营养科学。",
     "aboutText2": "我们相信透明度、质量以及由严谨研究支持的自然力量，帮助您实现最佳健康状态。",
+    "contact": "联系我们",
     "glossary": "成分词汇表",
     "help": "帮助中心",
     "terms": "条款及细则",

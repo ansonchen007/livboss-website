@@ -33,15 +33,36 @@ export async function generateMetadata({ params }: Props) {
       siteName: 'LivBoss',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       type: 'website',
+      // TODO: Replace with final OG image asset
+      images: [
+        {
+          url: `${baseUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: metaTitle,
+        },
+      ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: metaTitle,
       description: metaDescription,
+      images: [`${baseUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: currentUrl,
       languages: alternateLanguages,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }

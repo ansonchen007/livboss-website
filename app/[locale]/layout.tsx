@@ -3,6 +3,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
 import Footer from '@/components/Footer';
+import Script from 'next/script';
 import '../globals.css';
 
 export const runtime = 'edge';
@@ -25,8 +26,39 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  // Organization schema for SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LivBoss Group Limited",
+    "alternateName": "力博斯集团有限公司",
+    "url": "https://www.livboss.com", // TODO: Update with final domain
+    "logo": "https://www.livboss.com/logo/livboss-logo.svg",
+    "brand": {
+      "@type": "Brand",
+      "name": "LivBoss"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "info@livboss.com",
+        "availableLanguage": ["en", "zh-CN", "ja"]
+      }
+    ]
+  };
+
   return (
     <html lang={locale}>
+      <head>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
+      </head>
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
