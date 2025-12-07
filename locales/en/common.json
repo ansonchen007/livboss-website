@@ -10,10 +10,15 @@
   },
   "hero": {
     "label": "Liver Wellness",
-    "title": "Broccoli Sprout Formula",
-    "subtitle": "Nature's Most Powerful Liver Protection",
-    "ctaPrimary": "Discover More",
-    "ctaSecondary": "View Science"
+    "title": "Let your liver breathe a little",
+    "subtitle": "A premium broccoli sprout formula designed to support your liver through late nights, social drinking, and everyday stress.",
+    "ctaPrimary": "Learn about the formula",
+    "ctaSecondary": "See ingredients & science",
+    "imageAlt": "LivBoss premium broccoli sprout liver support supplement"
+  },
+  "home": {
+    "metaTitle": "LivBoss - Premium Broccoli Sprout Liver Support",
+    "metaDescription": "Science-backed liver wellness with broccoli sprout extract. Daily support for late nights, social drinking, and modern lifestyle stress."
   },
   "why": {
     "title": "Why Liver Protection",
@@ -94,41 +99,54 @@
     "title": "Health Center",
     "subtitle": "Evidence-based insights on liver health, nutrition science, and wellness strategies for modern lifestyles",
     "readMore": "Read more",
+    "metaTitle": "Health Center - Liver Wellness Insights | LivBoss",
+    "metaDescription": "Evidence-based articles on liver health, broccoli sprouts, detoxification, and wellness strategies for modern lifestyles.",
     "articles": {
+      "readMore": "Read more",
       "article1": {
         "tag": "Liver Health Basics",
-        "title": "Understanding Your Liver: The Body's Detox Powerhouse",
-        "excerpt": "Learn how your liver works around the clock to process nutrients, filter toxins, and maintain optimal health."
+        "title": "Know your liver: the body's silent powerhouse",
+        "excerpt": "Your liver works quietly every day to process nutrients, handle toxins, and support digestion. In this article, we look at what the liver actually does and why daily care matters.",
+        "imageAlt": "Scientific illustration of liver anatomy and function"
       },
       "article2": {
-        "tag": "Late Nights & Liver",
-        "title": "How Sleep Deprivation Affects Liver Function",
-        "excerpt": "Discover the science behind late-night work and social drinking, and how to support your liver during demanding periods."
+        "tag": "Sleep & Recovery",
+        "title": "How lack of sleep can affect your liver",
+        "excerpt": "Staying up late once in a while is common, but long-term sleep debt can put extra stress on your liver. Learn how disrupted sleep may influence liver function and what you can do about it.",
+        "imageAlt": "Person sleeping peacefully for liver recovery"
       },
       "article3": {
         "tag": "Ingredients & Science",
-        "title": "Broccoli Sprouts: Nature's Liver Protection Secret",
-        "excerpt": "Explore the research-backed benefits of sulforaphane and why broccoli sprouts are a game-changer for liver wellness."
+        "title": "Broccoli sprouts: a small plant with big potential",
+        "excerpt": "Broccoli sprouts are rich in natural compounds that have been widely studied for their role in antioxidant and detox pathways. Here we explain what they are and why they have attracted so much attention.",
+        "imageAlt": "Fresh broccoli sprouts with sulforaphane compounds"
+      },
+      "article4": {
+        "tag": "Scientific Deep Dive",
+        "title": "Broccoli Sprouts and Liver Daily Support: A Scientific Review",
+        "excerpt": "An in-depth look at the science behind broccoli sprouts, sulforaphane, and their relationship with liver health. Includes clinical trial data and safety considerations.",
+        "imageAlt": "Scientific research on broccoli sprouts and liver health"
       }
     }
   },
   "products": {
-    "title": "Our Flagship Liver Support Formula",
-    "subtitle": "Premium broccoli sprout extract combined with science-backed ingredients for optimal daily liver wellness",
+    "title": "Our flagship liver support formula",
+    "subtitle": "Built around broccoli sprouts, with carefully balanced nutrients for daily liver protection and long-term wellness.",
     "main": {
       "name": "LivBoss Broccoli Sprout Liver Support",
-      "description": "Our flagship formula combines patented broccoli sprout extract with essential nutrients to provide comprehensive liver protection. Designed for modern lifestyles with late nights, social drinking, and high stress.",
-      "benefit1": "Rich in sulforaphane from broccoli sprout extract",
-      "benefit2": "Supports liver function during late-night work and social drinking",
-      "benefit3": "Transparent, science-based formulation with clinical dosages",
-      "benefit4": "Easy to integrate into your daily wellness routine"
+      "description": "A premium liver support supplement featuring concentrated broccoli sprout actives, designed for people who face late nights, social drinking, or long-term medication.",
+      "benefit1": "Broccoli sprout actives to support natural detox pathways",
+      "benefit2": "Designed for late nights, social drinking, and long-term stress on the liver",
+      "benefit3": "Transparent formulation with science-based ingredient levels",
+      "benefit4": "Easy daily routine that fits into modern busy lifestyles",
+      "imageAlt": "LivBoss broccoli sprout liver support supplement bottle"
     },
     "badges": {
-      "broccoli": "Broccoli Sprout Extract",
-      "bvitamins": "B Vitamins",
-      "antioxidant": "Antioxidant Support",
-      "noSugar": "No Sugar",
-      "noCaffeine": "No Caffeine"
+      "broccoli": "Broccoli sprout extract",
+      "bvitamins": "B-complex vitamins",
+      "antioxidant": "Antioxidant support",
+      "sugarfree": "No added sugar",
+      "caffeinefree": "Caffeine-free"
     }
   },
   "buy": {
@@ -155,13 +173,30 @@
     }
   },
   "glossary": {
-    "title": "Ingredient Glossary",
-    "subtitle": "Understanding the key ingredients in LivBoss and their scientifically-backed benefits for liver health",
-    "metaDescription": "Comprehensive guide to LivBoss ingredients including broccoli sprouts, B vitamins, and antioxidants for liver support",
+    "title": "Ingredient glossary",
+    "subtitle": "A quick reference to key ingredients and terms often mentioned in liver wellness and broccoli sprout formulas. For the exact composition of any product, always follow the information on the label.",
+    "metaTitle": "Ingredient Glossary - Liver Health Terms | LivBoss",
+    "metaDescription": "Learn about key ingredients such as broccoli sprout extract, sulforaphane, B-complex vitamins and antioxidants in liver wellness formulas.",
     "items": {
       "broccoli": {
-        "name": "Broccoli Sprout Extract",
-        "description": "Rich in sulforaphane, a powerful compound that activates the body's natural detoxification pathways and protects liver cells from oxidative stress. Clinical studies show it supports Phase II liver detoxification."
+        "name": "Broccoli sprout extract",
+        "description": "Concentrated extract made from young broccoli sprouts. These sprouts naturally contain compounds that have been widely studied for their role in antioxidant and detox pathways. In liver support formulas, broccoli sprout extract is often used to support the body's own defence systems."
+      },
+      "sulforaphane": {
+        "name": "Sulforaphane (from broccoli sprouts)",
+        "description": "Sulforaphane is a well-known compound that can be formed from nutrients found in broccoli sprouts. Research has focused on its involvement in antioxidant and cellular defence pathways. Supplement products may use broccoli sprout ingredients that are standardised for sulforaphane-related activity."
+      },
+      "bvitamins": {
+        "name": "B-complex vitamins",
+        "description": "A group of water-soluble vitamins, including B1, B2, B3, B6, B12, folate and others. B vitamins are involved in energy metabolism and many enzyme reactions. In liver wellness formulas they are often included to support general metabolism and daily vitality."
+      },
+      "antioxidants": {
+        "name": "Antioxidant nutrients",
+        "description": "A broad term for nutrients such as vitamin C, vitamin E, certain plant polyphenols and other compounds that help protect cells from oxidative stress. Antioxidant support is a common theme in liver-related nutrition."
+      },
+      "liversupport": {
+        "name": "Liver support botanical blend",
+        "description": "A descriptive term for combinations of plant extracts traditionally used to support liver health and digestion, such as artichoke, milk thistle or turmeric. Different products use different blends, and not every formula contains the same ingredients. Always check the actual label for the formula you are using."
       },
       "bcomplex": {
         "name": "B-Complex Vitamins",
@@ -195,21 +230,22 @@
   },
   "help": {
     "title": "Help Center",
-    "subtitle": "Frequently asked questions about LivBoss liver support formula",
+    "subtitle": "Answers to common questions about using LivBoss liver support in daily life. This information is general in nature and does not replace medical advice.",
+    "metaTitle": "Help Center - FAQs About Liver Support | LivBoss",
     "metaDescription": "Find answers to common questions about LivBoss usage, dosage, safety, and liver health support",
     "faq": {
-      "q1": "Who should take LivBoss?",
-      "a1": "LivBoss is designed for adults who want to support their liver health, especially those with demanding lifestyles including late-night work, social drinking, high stress, or long-term medication use. It's also suitable for anyone seeking daily liver wellness support. Consult your healthcare provider if you have existing liver conditions or are pregnant/nursing.",
-      "q2": "How long should I take LivBoss?",
-      "a2": "LivBoss is formulated for long-term daily use as part of your wellness routine. Many users notice benefits within 2-4 weeks, but optimal results are achieved with consistent use over 2-3 months. The ingredients are safe for ongoing supplementation to maintain liver health.",
-      "q3": "Can I take LivBoss with other medications?",
-      "a3": "While LivBoss contains natural ingredients, some may interact with certain medications. Always consult your healthcare provider or pharmacist before starting any new supplement, especially if you take prescription medications or have existing health conditions.",
-      "q4": "Is LivBoss suitable for long-term use?",
-      "a4": "Yes, LivBoss is formulated with ingredients that are safe and beneficial for long-term daily use. All ingredients are dosed at levels supported by clinical research for ongoing supplementation. Regular liver support can be an important part of maintaining optimal health.",
-      "q5": "What is the recommended dosage?",
-      "a5": "Follow the dosage instructions on the product label. Typically, take as directed with meals for optimal absorption. Do not exceed the recommended daily amount unless advised by a healthcare professional.",
-      "q6": "Are there any side effects?",
-      "a6": "LivBoss is generally well-tolerated. Some individuals may experience mild digestive changes when first starting. If you experience any adverse effects, discontinue use and consult your healthcare provider. Not suitable for individuals allergic to any of the ingredients.",
+      "q1": "Who is LivBoss Broccoli Sprout Liver Support designed for?",
+      "a1": "LivBoss is designed for adults who want daily support for their liver, especially people who often stay up late, have social drinking occasions, or feel that their lifestyle puts extra stress on the liver. It is not intended to diagnose, treat, cure, or prevent any disease. If you have a medical condition, please talk to your doctor before use.",
+      "q2": "How should I take it and for how long?",
+      "a2": "Please follow the directions on the product label. In general, a consistent daily routine over several weeks or months is more important than taking a large amount at once. Many people choose to use liver support supplements for 3 months or longer as part of a lifestyle routine, but you should adjust according to your own situation and your healthcare professional's advice.",
+      "q3": "Can I take LivBoss together with other medications or supplements?",
+      "a3": "Because everyone's health condition and medication use are different, we cannot give individual medical advice. If you are taking prescription drugs, have a diagnosed liver condition, or are using other supplements, please consult your doctor or pharmacist before adding LivBoss. Bring the full ingredient list with you so they can review it.",
+      "q4": "Can pregnant or breastfeeding women use this product?",
+      "a4": "Dietary supplements for pregnant or breastfeeding women should always be used with caution. We recommend that pregnant, planning pregnancy, or breastfeeding women consult their doctor or other qualified healthcare professional before using any supplement, including LivBoss. If you are unsure, do not use the product.",
+      "q5": "Are there any side effects or things I should pay attention to?",
+      "a5": "LivBoss is a dietary supplement, not a medicine, but it still may not be suitable for everyone. Do not use it if you are allergic to broccoli, cruciferous vegetables, or any listed ingredients. If you feel unwell or notice unusual symptoms after taking it, stop using the product and seek medical advice. Keep out of reach of children.",
+      "q6": "Where can I buy LivBoss and is it available in my region?",
+      "a6": "Availability may differ by country and region. You can check the \"Where to buy\" section on our website or contact us directly for purchase channels and local partners. Please follow the regulations and product labels of your local market.",
       "q7": "Where is LivBoss available?",
       "a7": "LivBoss is available through select online marketplaces and local partners depending on your region. Visit our 'Where to Buy' section for current availability in Southeast Asia, Mainland China, Japan, and other markets.",
       "q8": "How should I store LivBoss?",
@@ -219,6 +255,7 @@
   "terms": {
     "title": "Terms & Conditions",
     "subtitle": "Please read these terms carefully before using our website or purchasing our products",
+    "metaTitle": "Terms & Conditions | LivBoss",
     "metaDescription": "LivBoss terms and conditions for website use and product purchases",
     "lastUpdated": "Last updated: December 2024",
     "section1": {
@@ -253,6 +290,7 @@
   "privacy": {
     "title": "Privacy Policy",
     "subtitle": "How we collect, use, and protect your personal information",
+    "metaTitle": "Privacy Policy | LivBoss",
     "metaDescription": "LivBoss privacy policy - learn how we handle your personal data and protect your privacy",
     "lastUpdated": "Last updated: December 2024",
     "section1": {
@@ -296,6 +334,83 @@
       "body": "If you have any questions about this privacy policy or our data practices, please contact us at: privacy@livboss.com"
     }
   },
+  "productsPage": {
+    "title": "LivBoss Broccoli Sprout Liver Support",
+    "subtitle": "A premium liver support supplement featuring concentrated broccoli sprout actives, designed for people who face late nights, social drinking, or long-term medication",
+    "metaTitle": "LivBoss Products - Broccoli Sprout Liver Support",
+    "metaDescription": "Detailed information about LivBoss Broccoli Sprout Liver Support - ingredients, usage, and benefits for liver health",
+    "whatItIs": {
+      "title": "What is LivBoss?",
+      "description": "LivBoss is our flagship liver support formula that combines high-potency broccoli sprout extract with carefully selected nutrients. Each serving delivers research-backed ingredients at clinical dosages to support your liver's natural detoxification pathways and protect liver cells from oxidative stress."
+    },
+    "whoItsFor": {
+      "title": "Who is it for?",
+      "item1": "Professionals working late nights and irregular schedules",
+      "item2": "Those with frequent social drinking commitments",
+      "item3": "Individuals on long-term medication requiring liver support",
+      "item4": "Anyone seeking daily liver wellness maintenance"
+    },
+    "ingredients": {
+      "title": "Key Ingredients & Composition",
+      "subtitle": "Every ingredient is selected based on scientific research and included at effective dosages",
+      "items": {
+        "broccoli": {
+          "name": "Broccoli Sprout Extract",
+          "amount": "High-potency sulforaphane",
+          "role": "Activates Phase II detoxification enzymes and protects liver cells from oxidative damage"
+        },
+        "bcomplex": {
+          "name": "B-Complex Vitamins",
+          "amount": "Complete B1, B2, B6, B12 spectrum",
+          "role": "Supports energy metabolism and liver cell regeneration"
+        },
+        "milkthistle": {
+          "name": "Milk Thistle Extract",
+          "amount": "Standardized silymarin",
+          "role": "Protects liver cell membranes and promotes healthy bile flow"
+        },
+        "nac": {
+          "name": "N-Acetyl Cysteine",
+          "amount": "Therapeutic dosage",
+          "role": "Replenishes glutathione, the body's master antioxidant"
+        },
+        "alphalipoic": {
+          "name": "Alpha-Lipoic Acid",
+          "amount": "Bioavailable form",
+          "role": "Universal antioxidant supporting liver detoxification"
+        }
+      }
+    },
+    "usage": {
+      "title": "How to Use",
+      "dosage": "Take 2 capsules twice daily",
+      "timing": "Best taken after meals with water",
+      "duration": "Recommended continuous use for 3 months for optimal results",
+      "storage": "Store in a cool, dry place away from direct sunlight"
+    },
+    "faq": {
+      "title": "Product FAQ",
+      "q1": "Can I take this with other supplements?",
+      "a1": "Yes, LivBoss can generally be taken alongside most other supplements. However, if you're taking prescription medications, please consult your healthcare provider first.",
+      "q2": "How long before I see results?",
+      "a2": "Many users report feeling more energetic within 2-4 weeks. For optimal liver support benefits, we recommend consistent use for at least 2-3 months.",
+      "q3": "Is this suitable for vegetarians?",
+      "a3": "Yes, LivBoss uses vegetarian-friendly capsules and all ingredients are plant-based or synthetically derived (not from animal sources).",
+      "q4": "Are there any side effects?",
+      "a4": "LivBoss is generally well-tolerated. Some people may experience mild digestive changes when first starting. If you experience any adverse effects, discontinue use and consult a healthcare professional."
+    },
+    "cta": {
+      "title": "Ready to support your liver health?",
+      "buy": "Where to Buy",
+      "contact": "Contact Us"
+    }
+  },
+  "healthPage": {
+    "title": "Health Center",
+    "subtitle": "Evidence-based insights on liver health, nutrition science, and wellness strategies for modern lifestyles",
+    "metaDescription": "Browse our comprehensive library of articles on liver health, nutrition, and wellness",
+    "note": "This content is for general information purposes only and does not replace professional medical advice. Always consult with a qualified healthcare provider before making changes to your health regimen."
+  },
   "footer": {
     "followUs": "Follow us on social media",
     "about": "About Us",
@@ -305,7 +420,7 @@
     "help": "Help Center",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
-    "copyright": "© LivBoss Wellness Ltd {year}. All rights reserved."
+    "copyright": "© LivBoss Group Limited {year}. All rights reserved."
   },
   "language": {
     "current": "EN",

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import {useTranslations} from 'next-intl';
+import {useParams} from 'next/navigation';
+import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
@@ -11,6 +13,8 @@ interface HeaderProps {
 
 export default function Header({isActive, onHoverChange}: HeaderProps) {
   const t = useTranslations('nav');
+  const params = useParams();
+  const locale = params.locale as string || 'en';
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -23,11 +27,8 @@ export default function Header({isActive, onHoverChange}: HeaderProps) {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const getLocalizedPath = (path: string) => {
+    return locale === 'en' ? path : `/${locale}${path}`;
   };
 
   // Mobile always shows white header, desktop shows transparent or white based on isActive
@@ -45,59 +46,59 @@ export default function Header({isActive, onHoverChange}: HeaderProps) {
         <div className="flex items-center justify-between">
           {/* Left: Navigation Links (Desktop) */}
           <nav className="hidden lg:flex items-center gap-8">
-            <button 
-              onClick={() => scrollToSection('products')}
+            <Link 
+              href={getLocalizedPath('/products')}
               className={`text-sm tracking-wider uppercase hover:text-primary transition-colors font-light ${textColor}`}
             >
               {t('products')}
-            </button>
-            <button 
-              onClick={() => scrollToSection('health-center')}
+            </Link>
+            <Link 
+              href={getLocalizedPath('/health-center')}
               className={`text-sm tracking-wider uppercase hover:text-primary transition-colors font-light ${textColor}`}
             >
               {t('healthCenter')}
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile: Left nav */}
           <nav className="flex lg:hidden items-center gap-3">
-            <button 
-              onClick={() => scrollToSection('products')}
+            <Link 
+              href={getLocalizedPath('/products')}
               className="text-xs tracking-wider uppercase text-deep-brown hover:text-primary transition-colors font-light whitespace-nowrap"
             >
               {t('products')}
-            </button>
-            <button 
-              onClick={() => scrollToSection('health-center')}
+            </Link>
+            <Link 
+              href={getLocalizedPath('/health-center')}
               className="text-xs tracking-wider uppercase text-deep-brown hover:text-primary transition-colors font-light whitespace-nowrap"
             >
               {t('healthCenter')}
-            </button>
+            </Link>
           </nav>
 
           {/* Center: Brand Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 hidden lg:block">
-            <div className="text-center">
-              <h1 className={`text-2xl md:text-3xl tracking-[0.2em] font-light uppercase transition-colors ${textColor}`}>
-                LIVBOSS
-              </h1>
-              <p className={`text-[10px] tracking-[0.3em] uppercase mt-0.5 transition-colors ${isMobile || isActive ? 'text-deep-brown/60' : 'text-white/80'}`}>
-                Liver Wellness
-              </p>
-            </div>
-          </div>
+          <Link href={getLocalizedPath('/')} className="absolute left-1/2 -translate-x-1/2 hidden lg:block">
+            <svg width="200" height="133" viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg" className="transition-all duration-300">
+              {/* 内框：下边距进一步收紧 */}
+              <rect x="150" y="192" width="500" height="142" fill="none" stroke={isMobile || isActive ? '#C6A664' : '#FFFFFF'} strokeWidth="4"/>
+              {/* 外框：保持右下错位 8px */}
+              <rect x="158" y="200" width="500" height="142" fill="none" stroke={isMobile || isActive ? '#C6A664' : '#FFFFFF'} strokeWidth="4"/>
+              {/* LIVBOSS 字样：下移至光学居中 */}
+              <text x="400" y="307" textAnchor="middle" fontFamily="Cinzel, serif" fontSize="100" fill={isMobile || isActive ? '#C6A664' : '#FFFFFF'} fontWeight="bold" letterSpacing="2">LIVBOSS</text>
+            </svg>
+          </Link>
 
           {/* Mobile: Center brand */}
-          <div className="flex lg:hidden items-center justify-center flex-1">
-            <div className="text-center">
-              <h1 className="text-lg tracking-[0.15em] font-light uppercase text-deep-brown">
-                LIVBOSS
-              </h1>
-              <p className="text-[8px] tracking-[0.3em] uppercase text-deep-brown/60">
-                Liver Wellness
-              </p>
-            </div>
-          </div>
+          <Link href={getLocalizedPath('/')} className="flex lg:hidden items-center justify-center flex-1">
+            <svg width="120" height="80" viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg">
+              {/* 内框：下边距进一步收紧 */}
+              <rect x="150" y="192" width="500" height="142" fill="none" stroke="#C6A664" strokeWidth="4"/>
+              {/* 外框：保持右下错位 8px */}
+              <rect x="158" y="200" width="500" height="142" fill="none" stroke="#C6A664" strokeWidth="4"/>
+              {/* LIVBOSS 字样：下移至光学居中 */}
+              <text x="400" y="307" textAnchor="middle" fontFamily="Cinzel, serif" fontSize="100" fill="#C6A664" fontWeight="bold" letterSpacing="2">LIVBOSS</text>
+            </svg>
+          </Link>
 
           {/* Right: Buy Button + Language Switcher */}
           <div className="flex items-center gap-4 lg:gap-6">

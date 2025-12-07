@@ -10,8 +10,8 @@ export default function ProductsSection() {
     t('badges.broccoli'),
     t('badges.bvitamins'),
     t('badges.antioxidant'),
-    t('badges.noSugar'),
-    t('badges.noCaffeine')
+    t('badges.sugarfree'),
+    t('badges.caffeinefree')
   ];
 
   return (

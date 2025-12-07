@@ -8,6 +8,15 @@ export interface HealthArticle {
 }
 
 export const healthArticles: HealthArticle[] = [
+  // Featured article - Broccoli science review appears first
+  {
+    id: 'article4',
+    slug: 'broccoli-sprouts-liver-support',
+    tagKey: 'health.articles.article4.tag',
+    titleKey: 'health.articles.article4.title',
+    excerptKey: 'health.articles.article4.excerpt',
+    href: '/health-center/broccoli-sprouts-liver-support'
+  },
   {
     id: 'article1',
     slug: 'understanding-your-liver',

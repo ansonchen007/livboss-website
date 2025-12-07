@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-livboss-broccoli.jpg"
-          alt={t('title')}
+          alt={t('imageAlt')}
           fill
           priority
           className="object-cover object-center"

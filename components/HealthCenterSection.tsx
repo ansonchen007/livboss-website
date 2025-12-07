@@ -1,11 +1,13 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import {useLocale} from 'next-intl';
 import Link from 'next/link';
 import {healthArticles} from '@/data/healthArticles';
 
 export default function HealthCenterSection() {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <section id="health-center" className="py-24 px-6 bg-gradient-to-br from-paper-bg to-white">
@@ -22,12 +24,17 @@ export default function HealthCenterSection() {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {healthArticles.map((article) => (
-            <Link
-              key={article.id}
-              href={article.href}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-champagne-gold/20 hover:border-primary/30"
-            >
+          {healthArticles.map((article) => {
+            const articlePath = locale === 'en' 
+              ? `/health-center/${article.slug}` 
+              : `/${locale}/health-center/${article.slug}`;
+            
+            return (
+              <Link
+                key={article.id}
+                href={articlePath}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-champagne-gold/20 hover:border-primary/30"
+              >
               {/* Cover Image Placeholder */}
               <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 via-champagne-gold/20 to-paper-bg relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent"></div>
@@ -73,13 +80,14 @@ export default function HealthCenterSection() {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
         {/* View All Link */}
         <div className="mt-12 text-center">
           <Link
-            href="/health-center"
+            href={locale === 'en' ? '/health-center' : `/${locale}/health-center`}
             className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
           >
             <span>View All Articles</span>
