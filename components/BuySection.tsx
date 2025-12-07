@@ -47,18 +47,22 @@ export default function BuySection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Link
-            href={contactPath}
+          <a
+            href="https://wa.me/85251997110"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-primary text-white hover:bg-primary-dark rounded-xl font-semibold text-center transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {t('ctaPrimary')}
-          </Link>
-          <Link
-            href={contactPath}
+          </a>
+          <a
+            href="https://wa.me/85251997110"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold text-center transition-all duration-300"
           >
             {t('ctaSecondary')}
-          </Link>
+          </a>
         </div>
 
         {/* Marketplace Grid */}

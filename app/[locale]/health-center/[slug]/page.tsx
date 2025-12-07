@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: Props) {
   
   const t = await getTranslations({ locale, namespace: `health.articles.${article.id}` });
   
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://livboss.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
   const localePath = locale === 'en' ? '' : `/${locale}`;
-  const currentUrl = `${baseUrl}${localePath}/health-center/${slug}`;
+  const currentUrl = `${siteUrl}${localePath}/health-center/${slug}`;
   
   return {
     title: t('title'),

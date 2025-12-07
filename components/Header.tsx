@@ -104,7 +104,9 @@ export default function Header({isActive, onHoverChange}: HeaderProps) {
           {/* Right: Buy Button + Language Switcher */}
           <div className="flex items-center gap-4 lg:gap-6">
             <a 
-              href="#buy"
+              href="https://wa.me/85251997110"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`px-4 lg:px-6 py-2 rounded-lg text-sm font-semibold transition-all ${
                 isMobile || isActive 
                   ? 'bg-primary text-white hover:bg-primary-dark' 

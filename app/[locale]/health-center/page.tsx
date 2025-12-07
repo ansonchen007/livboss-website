@@ -11,14 +11,14 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'health' });
   
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://livboss.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
   const localePath = locale === 'en' ? '' : `/${locale}`;
-  const currentUrl = `${baseUrl}${localePath}/health-center`;
+  const currentUrl = `${siteUrl}${localePath}/health-center`;
   
   const alternateLanguages: Record<string, string> = {};
   ['en', 'zh', 'ja'].forEach((loc) => {
     const path = loc === 'en' ? '' : `/${loc}`;
-    alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${baseUrl}${path}/health-center`;
+    alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${siteUrl}${path}/health-center`;
   });
   
   const metaTitle = t('metaTitle');
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props) {
       // TODO: Replace with final OG image asset
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: metaTitle,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props) {
       card: 'summary_large_image',
       title: metaTitle,
       description: metaDescription,
-      images: [`${baseUrl}/og-image.jpg`],
+      images: [`${siteUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: currentUrl,

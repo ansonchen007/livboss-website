@@ -1,10 +1,29 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import {useParams} from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
+  const params = useParams();
+  const locale = params.locale as string || 'en';
+
+  const getLocalizedPath = (path: string) => {
+    return locale === 'en' ? path : `/${locale}${path}`;
+  };
+
+  // Get subtitle text
+  const subtitleText = t('subtitle');
+  
+  // For Chinese locale, split at the first Chinese comma to create two lines
+  const isChineseLocale = locale === 'zh-CN' || locale.startsWith('zh');
+  const subtitleParts = isChineseLocale && subtitleText.includes('，')
+    ? subtitleText.split('，').map((part, index) => 
+        index === 0 ? part + '，' : part
+      )
+    : [subtitleText];
 
   return (
     <section className="relative w-full min-h-screen lg:min-h-[90vh] overflow-hidden">
@@ -37,16 +56,20 @@ export default function HeroSection() {
           </h2>
 
           {/* Subtitle - responsive sizing */}
-          {t('subtitle') && (
-            <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 font-light tracking-wide max-w-3xl mx-auto px-2">
-              {t('subtitle')}
-            </p>
+          {subtitleText && (
+            <div className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 font-light tracking-wide max-w-3xl mx-auto px-2">
+              {subtitleParts.map((part, index) => (
+                <p key={index} className={index > 0 ? 'mt-1' : ''}>
+                  {part}
+                </p>
+              ))}
+            </div>
           )}
 
           {/* CTA Links - stack on mobile, row on desktop */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <a
-              href="#learn-more"
+            <Link
+              href={getLocalizedPath('/products')}
               className="group inline-flex items-center gap-2 text-white text-xs sm:text-sm md:text-base tracking-widest uppercase border-b border-white/50 pb-1 hover:border-white transition-all duration-300"
             >
               {t('ctaPrimary')}
@@ -58,10 +81,10 @@ export default function HeroSection() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
             <span className="hidden sm:block text-white/50 text-sm">|</span>
-            <a
-              href="#ingredients"
+            <Link
+              href={getLocalizedPath('/products')}
               className="group inline-flex items-center gap-2 text-white text-xs sm:text-sm md:text-base tracking-widest uppercase border-b border-white/50 pb-1 hover:border-white transition-all duration-300"
             >
               {t('ctaSecondary')}
@@ -73,7 +96,7 @@ export default function HeroSection() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

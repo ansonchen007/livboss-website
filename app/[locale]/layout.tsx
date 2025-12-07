@@ -26,14 +26,16 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
+
   // Organization schema for SEO
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "LivBoss Group Limited",
     "alternateName": "力博斯集团有限公司",
-    "url": "https://www.livboss.com", // TODO: Update with final domain
-    "logo": "https://www.livboss.com/logo/livboss-logo.svg",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo/livboss-logo.svg`,
     "brand": {
       "@type": "Brand",
       "name": "LivBoss"
@@ -42,7 +44,7 @@ export default async function LocaleLayout({
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "info@livboss.com",
+        "email": "hello@livboss.com",
         "availableLanguage": ["en", "zh-CN", "ja"]
       }
     ]

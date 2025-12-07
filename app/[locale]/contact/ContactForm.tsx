@@ -98,12 +98,11 @@ export default function ContactForm({ locale }: ContactFormProps) {
         <div className="bg-gradient-to-r from-primary/5 to-champagne-gold/10 rounded-2xl p-8 mb-16 text-center">
           <p className="text-deep-brown/70 mb-2">{t('emailLabel')}</p>
           <a 
-            href="mailto:info@livboss.com" 
+            href="mailto:hello@livboss.com" 
             className="text-2xl font-semibold text-primary hover:text-primary/80 transition-colors"
           >
-            info@livboss.com
+            hello@livboss.com
           </a>
-          {/* TODO: Replace placeholder email with actual business email */}
         </div>
 
         {/* Contact form */}

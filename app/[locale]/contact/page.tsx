@@ -10,6 +10,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'contactPage' });
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const currentUrl = `${siteUrl}${localePath}/contact`;
+
   const title = t('metaTitle');
   const description = t('metaDescription');
 
@@ -19,13 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://livboss.com${locale === 'en' ? '' : `/${locale}`}/contact`,
+      url: currentUrl,
       siteName: 'LivBoss',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       type: 'website',
       images: [
         {
-          url: '/og-image.jpg', // TODO: Replace with actual OG image
+          url: `${siteUrl}/og-image.jpg`, // TODO: Replace with actual OG image
           width: 1200,
           height: 630,
           alt: title,
@@ -36,14 +40,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.jpg'], // TODO: Replace with actual OG image
+      images: [`${siteUrl}/og-image.jpg`], // TODO: Replace with actual OG image
     },
     alternates: {
-      canonical: `https://livboss.com${locale === 'en' ? '' : `/${locale}`}/contact`,
+      canonical: currentUrl,
       languages: {
-        en: 'https://livboss.com/contact',
-        'zh-CN': 'https://livboss.com/zh/contact',
-        ja: 'https://livboss.com/ja/contact',
+        en: `${siteUrl}/contact`,
+        'zh-CN': `${siteUrl}/zh/contact`,
+        ja: `${siteUrl}/ja/contact`,
       },
     },
     robots: {

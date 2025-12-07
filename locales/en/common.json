@@ -113,6 +113,11 @@
       "title": "Want to learn more about our broccoli sprout liver support formula?",
       "button": "View Products"
     },
+    "whitepaper": {
+      "ctaTitle": "Download the full scientific whitepaper",
+      "ctaDescription": "If you are a distribution partner or healthcare professional, you can download the LivBoss whitepaper \"Broccoli Sprouts and Daily Liver Support: A Scientific Overview\" for more details on research background and formula design logic.",
+      "ctaButton": "Download whitepaper (PDF)"
+    },
     "related": {
       "title": "You may also like"
     },

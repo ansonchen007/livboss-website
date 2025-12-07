@@ -12,15 +12,15 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'productsPage' });
   
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://livboss.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
   const localePath = locale === 'en' ? '' : `/${locale}`;
-  const currentUrl = `${baseUrl}${localePath}/products`;
+  const currentUrl = `${siteUrl}${localePath}/products`;
   
   // Define alternate languages
   const alternateLanguages: Record<string, string> = {};
   ['en', 'zh', 'ja'].forEach((loc) => {
     const path = loc === 'en' ? '' : `/${loc}`;
-    alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${baseUrl}${path}/products`;
+    alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${siteUrl}${path}/products`;
   });
   
   const metaTitle = t('metaTitle');
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props) {
       type: 'website',
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: metaTitle,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props) {
       card: 'summary_large_image',
       title: metaTitle,
       description: metaDescription,
-      images: [`${baseUrl}/og-image.jpg`],
+      images: [`${siteUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: currentUrl,
@@ -73,7 +73,7 @@ export default async function ProductsPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'productsPage' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.livboss.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
 
   // Product schema for SEO
   const productSchema = {
@@ -85,8 +85,8 @@ export default async function ProductsPage({ params }: Props) {
       "@type": "Brand",
       "name": "LivBoss"
     },
-    "image": `${baseUrl}/images/products/livboss-main.png`, // TODO: Replace with actual product image path
-    "url": `${baseUrl}/products`,
+    "image": `${siteUrl}/images/products/livboss-main.png`, // TODO: Replace with actual product image path
+    "url": `${siteUrl}/products`,
     "sku": "LIVBOSS-BROCCOLI-SPROUT",
     "category": "DietarySupplement",
     "offers": {

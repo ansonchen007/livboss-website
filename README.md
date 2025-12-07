@@ -194,7 +194,7 @@ This is **Step 1** - i18n foundation. Future steps could include:
 
 ## 📧 Contact
 
-For questions or support, contact: info@livboss.com
+For questions or support, contact: hello@livboss.com
 
 ---
 

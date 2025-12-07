@@ -1,4 +1,10 @@
+'use client';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
 export default function ContentJA() {
+  const tHealth = useTranslations('health');
+  
   return (
     <>
         {/* セクション1：なぜ注目されているのか */}
@@ -264,6 +270,30 @@ export default function ContentJA() {
             <li>UC Agriculture & Natural Resources. Growing Sprouts at Home. Publication 8151. <a href="https://anrcatalog.ucanr.edu/pdf/8151.pdf" className="text-primary hover:underline">[PDF]</a></li>
             <li>Healthline. Broccoli Sprouts: Benefits, Nutrition, and How to Eat Them. <a href="https://www.healthline.com/nutrition/broccoli-sprouts" className="text-primary hover:underline">[記事]</a></li>
           </ol>
+        </section>
+
+        {/* Whitepaper Download CTA */}
+        <section className="mt-16 mb-12 bg-gradient-to-br from-primary/5 to-champagne-gold/10 border border-primary/20 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-light text-deep-brown mb-4">
+              {tHealth('whitepaper.ctaTitle')}
+            </h3>
+            <p className="text-text-primary/80 leading-relaxed mb-6">
+              {tHealth('whitepaper.ctaDescription')}
+            </p>
+            {/* TODO: Final PDF file will be generated from docs/livboss-broccoli-liver-whitepaper.md */}
+            <Link
+              href="/docs/livboss-broccoli-liver-whitepaper.pdf"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              {tHealth('whitepaper.ctaButton')}
+            </Link>
+          </div>
         </section>
 
         {/* 免責事項 */}

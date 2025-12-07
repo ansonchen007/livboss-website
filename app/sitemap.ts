@@ -2,7 +2,7 @@ import {MetadataRoute} from 'next';
 import {locales} from '@/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://livboss.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
   
   // Define all routes
   const routes = [
@@ -28,11 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const alternateLanguages: Record<string, string> = {};
       locales.forEach((loc) => {
         const altPath = loc === 'en' ? '' : `/${loc}`;
-        alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${baseUrl}${altPath}${route.path}`;
+        alternateLanguages[loc === 'zh' ? 'zh-CN' : loc] = `${siteUrl}${altPath}${route.path}`;
       });
       
       pages.push({
-        url: `${baseUrl}${fullPath}`,
+        url: `${siteUrl}${fullPath}`,
         lastModified: new Date(),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
