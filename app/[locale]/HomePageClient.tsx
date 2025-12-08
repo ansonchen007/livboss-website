@@ -7,6 +7,7 @@ import HeroSection from '@/components/HeroSection';
 import ProductsSection from '@/components/ProductsSection';
 import HealthCenterSection from '@/components/HealthCenterSection';
 import BuySection from '@/components/BuySection';
+import FadeInSection from '@/components/FadeInSection';
 
 export default function HomePageClient() {
   const t = useTranslations();
@@ -54,13 +55,19 @@ export default function HomePageClient() {
       <HeroSection />
       
       {/* Products Section */}
-      <ProductsSection />
+      <FadeInSection direction="up" delay={100}>
+        <ProductsSection />
+      </FadeInSection>
       
       {/* Health Center Section */}
-      <HealthCenterSection />
+      <FadeInSection direction="up" delay={150}>
+        <HealthCenterSection />
+      </FadeInSection>
       
       {/* Buy Section */}
-      <BuySection />
+      <FadeInSection direction="scale" delay={200}>
+        <BuySection />
+      </FadeInSection>
     </main>
   );
 }

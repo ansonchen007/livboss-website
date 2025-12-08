@@ -2,6 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import DoubleFrameCard from './DoubleFrameCard';
+import FadeInSection from './FadeInSection';
 
 export default function ProductsSection() {
   const t = useTranslations('products');
@@ -18,18 +19,21 @@ export default function ProductsSection() {
     <section id="products" className="py-24 px-6 bg-white">
       <div className="max-w-[1280px] mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-deep-brown mb-4 tracking-wide">
-            {t('title')}
-          </h2>
-          <p className="text-lg md:text-xl text-text-primary/70 max-w-3xl mx-auto">
-            {t('subtitle')}
-          </p>
-        </div>
+        <FadeInSection direction="up" delay={0}>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-deep-brown mb-4 tracking-wide">
+              {t('title')}
+            </h2>
+            <p className="text-lg md:text-xl text-text-primary/70 max-w-3xl mx-auto">
+              {t('subtitle')}
+            </p>
+          </div>
+        </FadeInSection>
 
         {/* Main Product Card */}
-        <DoubleFrameCard>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <FadeInSection direction="scale" delay={200}>
+          <DoubleFrameCard>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Product Image Placeholder */}
             <div className="aspect-square bg-gradient-to-br from-primary/10 via-paper-bg to-champagne-gold/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent"></div>
@@ -70,16 +74,23 @@ export default function ProductsSection() {
             </div>
           </div>
         </DoubleFrameCard>
+        </FadeInSection>
 
         {/* Ingredient Badges */}
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {badges.map((badge, index) => (
-            <div 
+            <FadeInSection 
               key={index}
-              className="px-5 py-2.5 bg-paper-bg border border-champagne-gold/30 rounded-full text-sm text-deep-brown/80 font-light tracking-wide hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+              direction="up"
+              delay={300 + index * 100}
+              className="inline-block"
             >
+              <div 
+                className="px-5 py-2.5 bg-paper-bg border border-champagne-gold/30 rounded-full text-sm text-deep-brown/80 font-light tracking-wide hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 hover:scale-105"
+              >
               {badge}
             </div>
+            </FadeInSection>
           ))}
         </div>
       </div>

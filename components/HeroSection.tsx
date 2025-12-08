@@ -4,11 +4,19 @@ import {useTranslations} from 'next-intl';
 import {useParams} from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import {useEffect, useState} from 'react';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
   const params = useParams();
   const locale = params.locale as string || 'en';
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const getLocalizedPath = (path: string) => {
     return locale === 'en' ? path : `/${locale}${path}`;
@@ -44,20 +52,28 @@ export default function HeroSection() {
 
       {/* Text overlay - bottom center */}
       <div className="relative min-h-screen lg:min-h-[90vh] flex items-end justify-center pb-12 sm:pb-16 md:pb-20 lg:pb-32">
-        <div className="text-center px-4 sm:px-6 max-w-5xl w-full">
+        <div className={`text-center px-4 sm:px-6 max-w-5xl w-full transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           {/* Small label */}
-          <p className="text-white/90 text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4 font-light">
+          <p className={`text-white/90 text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4 font-light transition-all duration-700 delay-200 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
             {t('label')}
           </p>
 
           {/* Main title - responsive sizing and line breaks */}
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide md:tracking-wider mb-4 sm:mb-6 leading-tight px-2">
+          <h2 className={`text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide md:tracking-wider mb-4 sm:mb-6 leading-tight px-2 transition-all duration-1000 delay-300 ${
+            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}>
             {t('title')}
           </h2>
 
           {/* Subtitle - responsive sizing */}
           {subtitleText && (
-            <div className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 font-light tracking-wide max-w-3xl mx-auto px-2">
+            <div className={`text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 font-light tracking-wide max-w-3xl mx-auto px-2 transition-all duration-1000 delay-500 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
               {subtitleParts.map((part, index) => (
                 <p key={index} className={index > 0 ? 'mt-1' : ''}>
                   {part}
@@ -67,7 +83,9 @@ export default function HeroSection() {
           )}
 
           {/* CTA Links - stack on mobile, row on desktop */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 transition-all duration-1000 delay-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
             <Link
               href={getLocalizedPath('/products')}
               className="group inline-flex items-center gap-2 text-white text-xs sm:text-sm md:text-base tracking-widest uppercase border-b border-white/50 pb-1 hover:border-white transition-all duration-300"
