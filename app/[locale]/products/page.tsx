@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import Script from 'next/script';
+import Image from 'next/image';
 import DoubleFrameCard from '@/components/DoubleFrameCard';
 import Header from '@/components/Header';
 
@@ -203,13 +204,15 @@ export default async function ProductsPage({ params }: Props) {
 
           {/* Product Visualization Section */}
           <section className="mb-20">
-            <div className="relative w-full max-w-5xl mx-auto">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-champagne-gold/20">
-                <img 
+            <div className="relative w-full max-w-3xl mx-auto">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-champagne-gold/20 bg-paper-bg">
+                <Image 
                   src="/images/product-formula-visualization.jpg" 
                   alt="LivBoss Broccoli Sprout Formula - Premium Scientific Visualization"
-                  className="w-full h-full object-cover object-center"
-                  loading="lazy"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 768px"
                 />
                 {/* Gradient overlay for better text readability if needed */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
