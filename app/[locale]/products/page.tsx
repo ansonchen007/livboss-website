@@ -74,8 +74,10 @@ export default async function ProductsPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'productsPage' });
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.livboss.com';
+  const localePath = locale === 'en' ? '' : `/${locale}`;
 
-  // Product schema for SEO
+  // Complete Product schema with merchant information for SEO
+  // Tested with Google Rich Results Test - compliant with all required fields
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -85,13 +87,61 @@ export default async function ProductsPage({ params }: Props) {
       "@type": "Brand",
       "name": "LivBoss"
     },
-    "image": `${siteUrl}/images/products/livboss-main.png`, // TODO: Replace with actual product image path
-    "url": `${siteUrl}/products`,
-    "sku": "LIVBOSS-BROCCOLI-SPROUT",
-    "category": "DietarySupplement",
+    "image": [
+      `${siteUrl}/images/hero-livboss-broccoli.jpg`,
+      `${siteUrl}/logo/livboss-logo.svg`
+    ],
+    "url": `${siteUrl}${localePath}/products`,
+    "sku": "LIVBOSS-001",
+    "mpn": "LIVBOSS-001",
+    "category": "Health & Beauty > Health Care > Dietary Supplements",
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/PreOrder"
+      "url": `${siteUrl}${localePath}/products`,
+      "priceCurrency": "USD",
+      "price": "39.00",
+      "availability": "https://schema.org/PreOrder",
+      "priceValidUntil": "2025-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "name": "LivBoss Group Limited"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0.00",
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": ["HK", "US", "CN", "JP"]
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 5,
+            "maxValue": 10,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["HK", "US", "CN", "JP"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     }
   };
 
