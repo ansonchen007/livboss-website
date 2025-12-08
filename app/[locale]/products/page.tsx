@@ -312,7 +312,7 @@ export default async function ProductsPage({ params }: Props) {
                 {t('cta.buy')}
               </Link>
               <Link
-                href={`/${locale === 'en' ? '' : locale + '/'}help`}
+                href={`/${locale === 'en' ? '' : locale + '/'}contact`}
                 className="px-8 py-3 bg-white text-primary rounded-lg hover:bg-paper-bg transition-colors font-medium border border-primary"
               >
                 {t('cta.contact')}

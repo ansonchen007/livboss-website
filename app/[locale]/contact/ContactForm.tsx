@@ -22,9 +22,20 @@ export default function ContactForm({ locale }: ContactFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [submitCount, setSubmitCount] = useState(0);
+  const [cooldownEndTime, setCooldownEndTime] = useState(0);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Client-side rate limiting check
+    const now = Date.now();
+    if (now < cooldownEndTime) {
+      const remainingSeconds = Math.ceil((cooldownEndTime - now) / 1000);
+      setError(`Please wait ${remainingSeconds} seconds before submitting again.`);
+      return;
+    }
+
     setIsSubmitting(true);
     setError('');
     
@@ -40,11 +51,22 @@ export default function ContactForm({ locale }: ContactFormProps) {
       const data = await response.json();
 
       if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error('Too many requests. Please try again in an hour.');
+        }
         throw new Error(data.error || 'Failed to submit form');
       }
 
       // Show success message
       setIsSubmitted(true);
+      setSubmitCount(prev => prev + 1);
+      
+      // Set cooldown: 30 seconds after first submit, 5 minutes after 3rd
+      if (submitCount >= 2) {
+        setCooldownEndTime(Date.now() + 300000); // 5 minutes
+      } else {
+        setCooldownEndTime(Date.now() + 30000); // 30 seconds
+      }
       
       // Reset form after 3 seconds
       setTimeout(() => {
@@ -141,6 +163,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                maxLength={100}
                 className="w-full px-4 py-3 rounded-lg border border-deep-brown/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
               />
             </div>
@@ -157,6 +180,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                maxLength={200}
                 className="w-full px-4 py-3 rounded-lg border border-deep-brown/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
               />
             </div>
@@ -189,6 +213,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 onChange={handleChange}
                 required
                 rows={6}
+                maxLength={2000}
                 className="w-full px-4 py-3 rounded-lg border border-deep-brown/20 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
               />
             </div>

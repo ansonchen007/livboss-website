@@ -1,4 +1,14 @@
-import {ReactElement} from 'react';
+import * as React from 'react';
+import {
+  Html,
+  Head,
+  Body,
+  Container,
+  Section,
+  Text,
+  Heading,
+  Hr,
+} from '@react-email/components';
 
 interface ContactEmailTemplateProps {
   name: string;
@@ -12,151 +22,119 @@ export function ContactEmailTemplate({
   email,
   region,
   message,
-}: ContactEmailTemplateProps): ReactElement {
+}: ContactEmailTemplateProps) {
   return (
-    <div style={{fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto', padding: '20px'}}>
-      {/* Header */}
-      <div style={{borderBottom: '3px solid #D97706', paddingBottom: '20px', marginBottom: '20px'}}>
-        <h1 style={{color: '#4A3728', margin: '0', fontSize: '24px', letterSpacing: '2px'}}>
-          LIVBOSS
-        </h1>
-        <p style={{color: '#8B7355', margin: '5px 0 0 0', fontSize: '12px', letterSpacing: '3px', textTransform: 'uppercase'}}>
-          Liver Wellness
-        </p>
-      </div>
+    <Html>
+      <Head />
+      <Body style={{fontFamily: 'Arial, sans-serif', backgroundColor: '#f5f5f5'}}>
+        <Container style={{maxWidth: '600px', margin: '0 auto', padding: '20px'}}>
+          {/* Header */}
+          <Section style={{borderBottom: '3px solid #D97706', paddingBottom: '20px', marginBottom: '20px'}}>
+            <Heading style={{color: '#4A3728', margin: '0', fontSize: '24px', letterSpacing: '2px'}}>
+              LIVBOSS
+            </Heading>
+            <Text style={{color: '#8B7355', margin: '5px 0 0 0', fontSize: '12px', letterSpacing: '3px', textTransform: 'uppercase'}}>
+              Liver Wellness
+            </Text>
+          </Section>
 
-      {/* Title */}
-      <h2 style={{color: '#4A3728', fontSize: '20px', marginBottom: '20px'}}>
-        New Contact Form Submission
-      </h2>
+          {/* Title */}
+          <Heading as="h2" style={{color: '#4A3728', fontSize: '20px', marginBottom: '20px'}}>
+            New Contact Form Submission
+          </Heading>
 
-      {/* Contact Information */}
-      <div style={{backgroundColor: '#F9F7F4', padding: '20px', borderRadius: '8px', marginBottom: '20px'}}>
-        <table style={{width: '100%', borderCollapse: 'collapse'}}>
-          <tbody>
-            <tr>
-              <td style={{padding: '8px 0', color: '#6B5D52', fontSize: '14px', width: '100px'}}>
-                <strong>Name:</strong>
-              </td>
-              <td style={{padding: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
-                {name}
-              </td>
-            </tr>
-            <tr>
-              <td style={{padding: '8px 0', color: '#6B5D52', fontSize: '14px'}}>
-                <strong>Email:</strong>
-              </td>
-              <td style={{padding: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
-                <a href={`mailto:${email}`} style={{color: '#D97706', textDecoration: 'none'}}>
-                  {email}
-                </a>
-              </td>
-            </tr>
+          {/* Contact Information */}
+          <Section style={{backgroundColor: '#F9F7F4', padding: '20px', borderRadius: '8px', marginBottom: '20px'}}>
+            <Text style={{margin: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
+              <strong style={{color: '#6B5D52'}}>Name:</strong> {name}
+            </Text>
+            <Text style={{margin: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
+              <strong style={{color: '#6B5D52'}}>Email:</strong> {email}
+            </Text>
             {region && (
-              <tr>
-                <td style={{padding: '8px 0', color: '#6B5D52', fontSize: '14px'}}>
-                  <strong>Region:</strong>
-                </td>
-                <td style={{padding: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
-                  {region}
-                </td>
-              </tr>
+              <Text style={{margin: '8px 0', color: '#2A2A2A', fontSize: '14px'}}>
+                <strong style={{color: '#6B5D52'}}>Region:</strong> {region}
+              </Text>
             )}
-          </tbody>
-        </table>
-      </div>
+          </Section>
 
-      {/* Message */}
-      <div style={{marginBottom: '30px'}}>
-        <h3 style={{color: '#4A3728', fontSize: '16px', marginBottom: '10px'}}>Message:</h3>
-        <div style={{
-          backgroundColor: '#FFFFFF', 
-          padding: '20px', 
-          borderRadius: '8px', 
-          border: '1px solid #E5E5E5',
-          whiteSpace: 'pre-wrap',
-          color: '#2A2A2A',
-          fontSize: '14px',
-          lineHeight: '1.6'
-        }}>
-          {message}
-        </div>
-      </div>
+          {/* Message */}
+          <Section style={{marginBottom: '30px'}}>
+            <Heading as="h3" style={{color: '#4A3728', fontSize: '16px', marginBottom: '10px'}}>
+              Message:
+            </Heading>
+            <Text style={{
+              backgroundColor: '#FFFFFF',
+              padding: '20px',
+              borderRadius: '8px',
+              border: '1px solid #E5E5E5',
+              whiteSpace: 'pre-wrap',
+              color: '#2A2A2A',
+              fontSize: '14px',
+              lineHeight: '1.6'
+            }}>
+              {message}
+            </Text>
+          </Section>
 
-      {/* Footer */}
-      <div style={{borderTop: '1px solid #E5E5E5', paddingTop: '20px', marginTop: '30px'}}>
-        <p style={{color: '#8B7355', fontSize: '12px', margin: '0', textAlign: 'center'}}>
-          This email was sent from the LivBoss website contact form
-        </p>
-        <p style={{color: '#8B7355', fontSize: '12px', margin: '5px 0 0 0', textAlign: 'center'}}>
-          <a href="https://www.livboss.com" style={{color: '#D97706', textDecoration: 'none'}}>
+          {/* Footer */}
+          <Hr style={{borderColor: '#E5E5E5', margin: '30px 0 20px 0'}} />
+          <Text style={{color: '#8B7355', fontSize: '12px', textAlign: 'center'}}>
+            This email was sent from the LivBoss website contact form
+          </Text>
+          <Text style={{color: '#8B7355', fontSize: '12px', textAlign: 'center'}}>
             www.livboss.com
-          </a>
-        </p>
-      </div>
-    </div>
+          </Text>
+        </Container>
+      </Body>
+    </Html>
   );
 }
 
 // Auto-reply template for customer
-export function ContactAutoReplyTemplate({name}: {name: string}): ReactElement {
+export function ContactAutoReplyTemplate({name}: {name: string}) {
   return (
-    <div style={{fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto', padding: '20px'}}>
-      {/* Header */}
-      <div style={{borderBottom: '3px solid #D97706', paddingBottom: '20px', marginBottom: '30px'}}>
-        <h1 style={{color: '#4A3728', margin: '0', fontSize: '28px', letterSpacing: '3px'}}>
-          LIVBOSS
-        </h1>
-        <p style={{color: '#8B7355', margin: '8px 0 0 0', fontSize: '13px', letterSpacing: '4px', textTransform: 'uppercase'}}>
-          Liver Wellness
-        </p>
-      </div>
+    <Html>
+      <Head />
+      <Body style={{fontFamily: 'Arial, sans-serif', backgroundColor: '#f5f5f5'}}>
+        <Container style={{maxWidth: '600px', margin: '0 auto', padding: '20px'}}>
+          {/* Header */}
+          <Section style={{borderBottom: '3px solid #D97706', paddingBottom: '20px', marginBottom: '30px'}}>
+            <Heading style={{color: '#4A3728', margin: '0', fontSize: '28px', letterSpacing: '3px'}}>
+              LIVBOSS
+            </Heading>
+            <Text style={{color: '#8B7355', margin: '8px 0 0 0', fontSize: '13px', letterSpacing: '4px', textTransform: 'uppercase'}}>
+              Liver Wellness
+            </Text>
+          </Section>
 
-      {/* Content */}
-      <p style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px'}}>
-        Dear {name},
-      </p>
+          {/* Content */}
+          <Text style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px'}}>
+            Dear {name},
+          </Text>
 
-      <p style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px'}}>
-        Thank you for contacting LivBoss. We have received your message and will get back to you within 24-48 hours.
-      </p>
+          <Text style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px'}}>
+            Thank you for contacting LivBoss. We have received your message and will get back to you within 24-48 hours.
+          </Text>
 
-      <p style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '30px'}}>
-        For urgent inquiries, please contact us via WhatsApp at +852 5199 7110.
-      </p>
+          <Text style={{color: '#2A2A2A', fontSize: '16px', lineHeight: '1.6', marginBottom: '30px'}}>
+            For urgent inquiries, please contact us via WhatsApp at +852 5199 7110.
+          </Text>
 
-      {/* CTA */}
-      <div style={{textAlign: 'center', margin: '40px 0'}}>
-        <a 
-          href="https://www.livboss.com" 
-          style={{
-            backgroundColor: '#D97706',
-            color: '#FFFFFF',
-            padding: '14px 32px',
-            textDecoration: 'none',
-            borderRadius: '8px',
-            fontSize: '15px',
-            fontWeight: '600',
-            display: 'inline-block',
-            letterSpacing: '1px'
-          }}
-        >
-          Visit Our Website
-        </a>
-      </div>
-
-      {/* Footer */}
-      <div style={{borderTop: '1px solid #E5E5E5', paddingTop: '20px', marginTop: '40px'}}>
-        <p style={{color: '#8B7355', fontSize: '13px', lineHeight: '1.6', margin: '0'}}>
-          Best regards,<br />
-          <strong>LivBoss Team</strong>
-        </p>
-        <p style={{color: '#8B7355', fontSize: '12px', margin: '15px 0 0 0'}}>
-          Email: hello@livboss.com<br />
-          WhatsApp: +852 5199 7110<br />
-          Website: <a href="https://www.livboss.com" style={{color: '#D97706', textDecoration: 'none'}}>www.livboss.com</a>
-        </p>
-      </div>
-    </div>
+          {/* Footer */}
+          <Hr style={{borderColor: '#E5E5E5', margin: '40px 0 20px 0'}} />
+          <Text style={{color: '#8B7355', fontSize: '13px', lineHeight: '1.6', margin: '0'}}>
+            Best regards,<br />
+            <strong>LivBoss Team</strong>
+          </Text>
+          <Text style={{color: '#8B7355', fontSize: '12px', margin: '15px 0 0 0'}}>
+            Email: hello@livboss.com<br />
+            WhatsApp: +852 5199 7110<br />
+            Website: www.livboss.com
+          </Text>
+        </Container>
+      </Body>
+    </Html>
   );
 }
+
