@@ -201,6 +201,27 @@ export default async function ProductsPage({ params }: Props) {
           </div>
           </section>
 
+          {/* Product Visualization Section */}
+          <section className="mb-20">
+            <div className="relative w-full max-w-5xl mx-auto">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-champagne-gold/20">
+                <img 
+                  src="/images/product-formula-visualization.jpg" 
+                  alt="LivBoss Broccoli Sprout Formula - Premium Scientific Visualization"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+                {/* Gradient overlay for better text readability if needed */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
+              </div>
+              
+              {/* Optional caption */}
+              <p className="text-center text-sm text-text-primary/60 mt-4 font-light">
+                {t('visualization.caption')}
+              </p>
+            </div>
+          </section>
+
           {/* Ingredients Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
