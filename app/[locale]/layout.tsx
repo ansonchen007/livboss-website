@@ -3,6 +3,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 import Script from 'next/script';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import '../globals.css';
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
           <Footer />
+          <ScrollToTop />
         </NextIntlClientProvider>
         
         {/* Google Analytics */}
