@@ -2,20 +2,12 @@ import {NextResponse} from 'next/server';
 import type {NextRequest} from 'next/server';
 import {Resend} from 'resend';
 
+export const runtime = 'edge';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Rate limiting store (in production, use Redis or database)
 const rateLimitStore = new Map<string, {count: number; resetTime: number}>();
-
-// Clean up old entries every hour
-setInterval(() => {
-  const now = Date.now();
-  for (const [key, value] of rateLimitStore.entries()) {
-    if (now > value.resetTime) {
-      rateLimitStore.delete(key);
-    }
-  }
-}, 3600000);
 
 export async function POST(request: NextRequest) {
   try {
