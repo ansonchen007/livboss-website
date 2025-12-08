@@ -12,6 +12,7 @@
     "generate-og-image": "node scripts/generate-og-image.js"
   },
   "dependencies": {
+    "@next/third-parties": "^16.0.7",
     "@react-email/body": "^0.2.0",
     "@react-email/components": "^1.0.1",
     "@react-email/head": "^0.0.12",

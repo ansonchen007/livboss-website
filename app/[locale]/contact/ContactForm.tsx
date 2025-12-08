@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import { trackContactFormSubmit } from '@/lib/analytics';
 
 interface ContactFormProps {
   locale: string;
@@ -61,6 +62,9 @@ export default function ContactForm({ locale }: ContactFormProps) {
       setIsSubmitted(true);
       setSubmitCount(prev => prev + 1);
       
+      // Track successful form submission
+      trackContactFormSubmit(true);
+      
       // Set cooldown: 30 seconds after first submit, 5 minutes after 3rd
       if (submitCount >= 2) {
         setCooldownEndTime(Date.now() + 300000); // 5 minutes
@@ -74,6 +78,8 @@ export default function ContactForm({ locale }: ContactFormProps) {
         setIsSubmitted(false);
       }, 3000);
     } catch (err) {
+      // Track failed form submission
+      trackContactFormSubmit(false);
       setError(err instanceof Error ? err.message : 'Failed to submit form');
     } finally {
       setIsSubmitting(false);

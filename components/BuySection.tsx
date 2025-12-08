@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl';
 import {useParams} from 'next/navigation';
 import Link from 'next/link';
+import {trackBuyNowClick} from '@/lib/analytics';
 
 export default function BuySection() {
   const t = useTranslations('buy');
@@ -51,6 +52,7 @@ export default function BuySection() {
             href="https://wa.me/85251997110"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackBuyNowClick('WhatsApp')}
             className="px-8 py-4 bg-primary text-white hover:bg-primary-dark rounded-xl font-semibold text-center transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {t('ctaPrimary')}
@@ -59,6 +61,7 @@ export default function BuySection() {
             href="https://wa.me/85251997110"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackBuyNowClick('WhatsApp_Inquiry')}
             className="px-8 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold text-center transition-all duration-300"
           >
             {t('ctaSecondary')}

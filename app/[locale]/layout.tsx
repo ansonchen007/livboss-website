@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import {GoogleAnalytics} from '@next/third-parties/google';
 import '../globals.css';
 
 export const runtime = 'edge';
@@ -84,6 +85,11 @@ export default async function LocaleLayout({
           {children}
           <Footer />
         </NextIntlClientProvider>
+        
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
       </body>
     </html>
   );
