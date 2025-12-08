@@ -4,6 +4,123 @@
 
 ---
 
+## 2025-12-08 - 用户体验和性能微优化
+
+### 1. 滚动到顶部按钮
+
+**决策**: 添加浮动的"返回顶部"按钮
+
+**实现**:
+- 创建 `ScrollToTop` 组件
+- 滚动超过 500px 自动显示
+- 平滑滚动动画
+- 淡入淡出过渡效果
+
+**用户体验**:
+- 方便长页面快速返回顶部
+- 视觉反馈清晰
+- 不干扰主要内容
+
+---
+
+### 2. 全局样式优化
+
+**决策**: 增强 CSS 全局配置
+
+**添加功能**:
+```css
+html {
+  scroll-behavior: smooth;  // 平滑滚动
+}
+
+body {
+  -webkit-font-smoothing: antialiased;  // 字体平滑
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+**自定义动画**:
+- Shimmer 效果（加载占位符）
+- Aspect ratio box（防止布局偏移）
+
+**原因**:
+- 提升整体视觉质量
+- 防止 CLS（累积布局偏移）
+- 更流畅的滚动体验
+
+---
+
+### 3. PWA 支持和移动优化
+
+**决策**: 添加 Progressive Web App 支持
+
+**实现**:
+- 创建 `app/manifest.ts` 动态生成 manifest
+- 创建 `public/manifest.json` 静态备份
+- 添加完整的 PWA meta 标签
+
+**配置**:
+```json
+{
+  "name": "LivBoss - Premium Liver Wellness",
+  "display": "standalone",
+  "theme_color": "#D97706",
+  "background_color": "#F9F7F4"
+}
+```
+
+**Meta 标签**:
+- viewport 优化（maximum-scale: 5）
+- theme-color
+- apple-mobile-web-app-capable
+- mobile-web-app-capable
+
+**原因**:
+- 支持添加到主屏幕
+- 提升移动端体验
+- 原生应用般的感觉
+- 离线访问准备
+
+---
+
+### 4. 性能预连接优化
+
+**决策**: 添加资源预连接
+
+**实现**:
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+```
+
+**原因**:
+- 减少字体加载延迟
+- 提前建立连接
+- 提升 First Contentful Paint (FCP)
+
+---
+
+### 5. 微交互增强
+
+**决策**: 为按钮添加缩放反馈
+
+**实现**:
+```css
+transform hover:scale-105 active:scale-95
+```
+
+**效果**:
+- 悬停时放大 5%
+- 点击时缩小 5%
+- 触觉反馈清晰
+
+**原因**:
+- 增强交互反馈
+- 提升用户信心
+- 现代化的 UI 感受
+
+---
+
 ## 2025-12-08 - 高级动画特效实现
 
 ### 1. 首页渐入动画系统

@@ -8,6 +8,7 @@ import ProductsSection from '@/components/ProductsSection';
 import HealthCenterSection from '@/components/HealthCenterSection';
 import BuySection from '@/components/BuySection';
 import FadeInSection from '@/components/FadeInSection';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function HomePageClient() {
   const t = useTranslations();
@@ -68,6 +69,9 @@ export default function HomePageClient() {
       <FadeInSection direction="scale" delay={200}>
         <BuySection />
       </FadeInSection>
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </main>
   );
 }
