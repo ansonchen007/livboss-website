@@ -78,6 +78,7 @@ export default async function ProductsPage({ params }: Props) {
 
   // Complete Product schema with merchant information for SEO
   // Tested with Google Rich Results Test - compliant with all required fields
+  // Updated with improved unitCode ("d" instead of "DAY") and extended priceValidUntil
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -101,7 +102,7 @@ export default async function ProductsPage({ params }: Props) {
       "priceCurrency": "USD",
       "price": "39.00",
       "availability": "https://schema.org/PreOrder",
-      "priceValidUntil": "2025-12-31",
+      "priceValidUntil": "2026-12-31",
       "itemCondition": "https://schema.org/NewCondition",
       "seller": {
         "@type": "Organization",
@@ -124,13 +125,13 @@ export default async function ProductsPage({ params }: Props) {
             "@type": "QuantitativeValue",
             "minValue": 1,
             "maxValue": 3,
-            "unitCode": "DAY"
+            "unitCode": "d"
           },
           "transitTime": {
             "@type": "QuantitativeValue",
             "minValue": 5,
             "maxValue": 10,
-            "unitCode": "DAY"
+            "unitCode": "d"
           }
         }
       },
