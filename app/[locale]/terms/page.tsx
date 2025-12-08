@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: Props) {
       siteName: 'LivBoss',
       locale: locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
       type: 'website',
-      // TODO: Replace with final OG image asset
       images: [
         {
           url: `${siteUrl}/og-image.jpg`,

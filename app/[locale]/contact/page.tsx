@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       images: [
         {
-          url: `${siteUrl}/og-image.jpg`, // TODO: Replace with actual OG image
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteUrl}/og-image.jpg`], // TODO: Replace with actual OG image
+      images: [`${siteUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: currentUrl,

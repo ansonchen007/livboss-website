@@ -4,6 +4,30 @@
 
 ---
 
+## 2025-12-08 - OG Image 生成与配置
+
+### 1. 创建自动化 OG Image 生成脚本
+
+**决策**: 使用 Sharp 库生成 1200x630px 的 SVG-to-JPEG OG 图片
+
+**实现**:
+- 创建 `scripts/generate-og-image.js` 脚本
+- 添加 npm script: `npm run generate-og-image`
+- 设计采用品牌双框架风格和香槟金配色
+
+**原因**:
+- 自动化生成，方便未来更新和维护
+- SVG 保证高质量渲染
+- 尺寸符合 Facebook、Twitter、LinkedIn 等平台要求
+
+**生成的文件**: `public/og-image.jpg` (1200x630px, JPEG 90% 质量)
+
+**移除的 TODO**:
+- ✅ 所有页面的 "TODO: Replace with final OG image asset" 已清理
+- ✅ 影响文件: terms, privacy, help, health-center, glossary, contact 页面
+
+---
+
 ## 2025-12-08 - 产品上线前准备
 
 ### 1. Product Schema - 库存状态设置为 PreOrder

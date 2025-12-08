@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "generate-pdf": "node scripts/generate-whitepaper-pdf.js",
-    "generate-favicons": "node scripts/generate-favicons.js"
+    "generate-favicons": "node scripts/generate-favicons.js",
+    "generate-og-image": "node scripts/generate-og-image.js"
   },
   "dependencies": {
     "next": "^15.5.7",
