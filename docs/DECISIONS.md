@@ -4,6 +4,54 @@
 
 ---
 
+## 2025-12-08 - 联系表单 API 实现
+
+### 1. 创建联系表单后端 API
+
+**决策**: 实现 `/api/contact` REST API 端点处理表单提交
+
+**实现**:
+- 创建 `app/api/contact/route.ts` API 路由
+- 添加表单验证（必填字段、邮箱格式）
+- 实现错误处理和成功响应
+- 更新 `ContactForm.tsx` 集成 API 调用
+
+**功能**:
+- ✅ 表单字段验证（name, email, message 必填）
+- ✅ 邮箱格式验证（regex）
+- ✅ 加载状态显示（isSubmitting）
+- ✅ 错误提示显示
+- ✅ 成功提示自动消失
+
+**待实现**:
+- 📧 邮件服务集成（Resend/SendGrid）
+- 当前使用 console.log 记录提交（生产环境需替换）
+
+**原因**:
+- 提供完整的用户反馈体验
+- 为后续邮件服务集成做好准备
+- 遵循 RESTful API 设计规范
+
+---
+
+## 2025-12-08 - 环境变量配置
+
+**决策**: 创建 `.env.local` 文件配置生产环境 URL
+
+**配置**:
+```
+NEXT_PUBLIC_SITE_URL=https://www.livboss.com
+```
+
+**原因**:
+- SEO 元数据需要完整 URL
+- OG Image 需要绝对路径
+- Sitemap 和 Robots.txt 生成
+
+**注意**: `.env.local` 已添加到 `.gitignore`，不会提交到仓库
+
+---
+
 ## 2025-12-08 - OG Image 生成与配置
 
 ### 1. 创建自动化 OG Image 生成脚本

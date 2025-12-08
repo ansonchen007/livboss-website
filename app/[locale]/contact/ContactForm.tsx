@@ -20,21 +20,42 @@ export default function ContactForm({ locale }: ContactFormProps) {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
     
-    // TODO: Implement API integration for form submission
-    console.log('Form data:', formData);
-    
-    // Show success message
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: '', email: '', region: '', message: '' });
-      setIsSubmitted(false);
-    }, 3000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+
+      // Show success message
+      setIsSubmitted(true);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({ name: '', email: '', region: '', message: '' });
+        setIsSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to submit form');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -176,15 +197,28 @@ export default function ContactForm({ locale }: ContactFormProps) {
             <div>
               <button
                 type="submit"
-                disabled={isSubmitted}
+                disabled={isSubmitted || isSubmitting}
                 className={`w-full py-4 rounded-lg font-semibold text-white transition-all ${
                   isSubmitted
                     ? 'bg-green-500 cursor-not-allowed'
+                    : isSubmitting
+                    ? 'bg-primary/70 cursor-wait'
                     : 'bg-primary hover:bg-primary/90 hover:shadow-lg'
                 }`}
               >
-                {isSubmitted ? t('form.successMessage') : t('form.submit')}
+                {isSubmitted 
+                  ? t('form.successMessage') 
+                  : isSubmitting 
+                  ? 'Sending...' 
+                  : t('form.submit')}
               </button>
+              
+              {/* Error message */}
+              {error && (
+                <p className="mt-3 text-sm text-red-600 text-center">
+                  {error}
+                </p>
+              )}
             </div>
 
             {/* Privacy note */}
