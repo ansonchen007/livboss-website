@@ -2,6 +2,7 @@ import {Metadata} from 'next';
 import {getTranslations} from 'next-intl/server';
 import {locales} from '@/i18n';
 import HomePageClient from './HomePageClient';
+import {generateOrganizationSchema, generateProductSchema, generateWebsiteSchema} from '@/lib/schema';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -72,6 +73,36 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   };
 }
 
-export default function Page() {
-  return <HomePageClient />;
+export default async function Page({params}: Props) {
+  const {locale} = await params;
+  
+  // Generate JSON-LD structured data
+  const organizationSchema = generateOrganizationSchema(locale);
+  const productSchema = generateProductSchema(locale);
+  const websiteSchema = generateWebsiteSchema(locale);
+  
+  return (
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <HomePageClient />
+    </>
+  );
 }
