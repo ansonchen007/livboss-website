@@ -1,12 +1,25 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContentZH() {
   const tHealth = useTranslations('health');
   
   return (
     <>
+        {/* 头图 */}
+        <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/broccoli-science-hero.jpg"
+            alt="科学家在实验室研究西兰花芽与肝脏健康"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          />
+        </div>
+
         {/* 第1节：为什么大家开始关注西兰花芽？ */}
         <section className="mb-12">
           <h2 className="text-3xl font-light text-deep-brown mb-6 border-b border-champagne-gold/30 pb-3">

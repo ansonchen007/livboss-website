@@ -1,12 +1,25 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContentEN() {
   const tHealth = useTranslations('health');
   
   return (
     <>
+        {/* Hero Image */}
+        <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/broccoli-science-hero.jpg"
+            alt="Scientist researching broccoli sprouts and liver health in laboratory"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          />
+        </div>
+
         {/* Section 1: Why the Growing Interest? */}
         <section className="mb-12">
           <h2 className="text-3xl font-light text-deep-brown mb-6 border-b border-champagne-gold/30 pb-3">
