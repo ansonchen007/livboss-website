@@ -95,8 +95,8 @@ export default function Header({isActive, onHoverChange}: HeaderProps) {
             <Image
               src="/logo/livboss-logo.svg"
               alt={tHeader('logoAlt')}
-              width={120}
-              height={80}
+              width={180}
+              height={120}
               priority
             />
           </Link>
