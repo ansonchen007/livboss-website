@@ -31,7 +31,8 @@ export const healthArticles: HealthArticle[] = [
     excerptKey: 'health.articles.article1.excerpt',
     href: '/health-center/understanding-your-liver',
     publishDate: '2024-10-20',
-    readTime: '5 min'
+    readTime: '5 min',
+    image: '/images/liver-anatomy-hero.jpg'
   },
   {
     id: 'article2',
