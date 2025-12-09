@@ -53,6 +53,7 @@ export const healthArticles: HealthArticle[] = [
     excerptKey: 'health.articles.article3.excerpt',
     href: '/health-center/broccoli-sprouts-science',
     publishDate: '2024-11-05',
-    readTime: '7 min'
+    readTime: '7 min',
+    image: '/images/broccoli-sprouts-nature.jpg'
   }
 ];
