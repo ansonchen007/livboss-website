@@ -210,6 +210,7 @@ export default async function ProductsPage({ params }: Props) {
                   src="/images/product-formula-visualization.jpg" 
                   alt="LivBoss Broccoli Sprout Formula - Premium Scientific Visualization"
                   fill
+                  unoptimized
                   className="object-cover object-center"
                   priority
                   sizes="(max-width: 768px) 100vw, 768px"

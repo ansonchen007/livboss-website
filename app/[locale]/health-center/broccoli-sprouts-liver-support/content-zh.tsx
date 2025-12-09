@@ -14,6 +14,7 @@ export default function ContentZH() {
             src="/images/broccoli-science-hero.jpg"
             alt="科学家在实验室研究西兰花芽与肝脏健康"
             fill
+            unoptimized
             priority
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"

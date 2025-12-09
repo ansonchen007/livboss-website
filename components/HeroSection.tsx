@@ -41,6 +41,7 @@ export default function HeroSection() {
           src="/images/hero-livboss-broccoli.jpg"
           alt={t('imageAlt')}
           fill
+          unoptimized
           priority
           className="object-cover object-center"
           sizes="100vw"

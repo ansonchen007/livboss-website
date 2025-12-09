@@ -41,6 +41,7 @@ export default function ProductsSection() {
                 src="/images/product-formula-visualization.jpg" 
                 alt="LivBoss Broccoli Sprout Formula"
                 fill
+                unoptimized
                 className="object-cover"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -14,6 +14,7 @@ export default function ContentEN() {
             src="/images/broccoli-science-hero.jpg"
             alt="Scientist researching broccoli sprouts and liver health in laboratory"
             fill
+            unoptimized
             priority
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"

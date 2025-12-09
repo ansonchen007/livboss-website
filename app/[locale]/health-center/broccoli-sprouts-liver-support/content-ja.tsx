@@ -14,6 +14,7 @@ export default function ContentJA() {
             src="/images/broccoli-science-hero.jpg"
             alt="研究室でブロッコリースプラウトと肝臓の健康を研究する科学者"
             fill
+            unoptimized
             priority
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
