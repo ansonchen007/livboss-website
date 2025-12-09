@@ -7,6 +7,7 @@ export interface HealthArticle {
   href: string;
   publishDate: string;
   readTime: string; // e.g., "8-10 min"
+  image?: string; // Optional image path
 }
 
 export const healthArticles: HealthArticle[] = [
@@ -19,7 +20,8 @@ export const healthArticles: HealthArticle[] = [
     excerptKey: 'health.articles.article4.excerpt',
     href: '/health-center/broccoli-sprouts-liver-support',
     publishDate: '2024-11-15',
-    readTime: '8-10 min'
+    readTime: '8-10 min',
+    image: '/images/broccoli-science-hero.jpg'
   },
   {
     id: 'article1',
