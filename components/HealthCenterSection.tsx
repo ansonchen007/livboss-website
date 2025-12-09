@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl';
 import {useLocale} from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import {healthArticles} from '@/data/healthArticles';
 
 export default function HealthCenterSection() {
@@ -35,16 +36,28 @@ export default function HealthCenterSection() {
                 href={articlePath}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-champagne-gold/20 hover:border-primary/30"
               >
-              {/* Cover Image Placeholder */}
-              <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 via-champagne-gold/20 to-paper-bg relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                </div>
+              {/* Cover Image */}
+              <div className="aspect-[16/10] relative overflow-hidden bg-gradient-to-br from-primary/10 via-champagne-gold/20 to-paper-bg">
+                {article.image ? (
+                  <Image
+                    src={article.image}
+                    alt={t(article.titleKey)}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Card Content */}
