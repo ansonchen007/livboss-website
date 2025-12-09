@@ -42,7 +42,8 @@ export const healthArticles: HealthArticle[] = [
     excerptKey: 'health.articles.article2.excerpt',
     href: '/health-center/sleep-deprivation-liver',
     publishDate: '2024-10-28',
-    readTime: '6 min'
+    readTime: '6 min',
+    image: '/images/sleep-liver-hero.jpg'
   },
   {
     id: 'article3',
