@@ -104,7 +104,7 @@ export default function HealthCenterSection() {
             href={locale === 'en' ? '/health-center' : `/${locale}/health-center`}
             className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
           >
-            <span>View All Articles</span>
+            <span>{t('health.viewAll')}</span>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

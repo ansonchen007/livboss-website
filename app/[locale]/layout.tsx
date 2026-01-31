@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import FloatingCTA from '@/components/FloatingCTA';
 import Script from 'next/script';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import '../globals.css';
@@ -86,6 +87,7 @@ export default async function LocaleLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <FloatingCTA />
         </NextIntlClientProvider>
         
         {/* Google Analytics */}
