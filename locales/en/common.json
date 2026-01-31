@@ -476,5 +476,9 @@
     "zh": "中文",
     "ja": "日本語"
   },
-  "cta_header": "Learn More"
+  "cta_header": "Learn More",
+  "floatingCta": {
+    "button": "Contact Us",
+    "wechat": "WeChat"
+  }
 }

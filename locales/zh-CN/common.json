@@ -476,5 +476,9 @@
     "zh": "中文",
     "ja": "日本語"
   },
-  "cta_header": "了解产品"
+  "cta_header": "了解产品",
+  "floatingCta": {
+    "button": "立即咨询",
+    "wechat": "微信咨询"
+  }
 }

@@ -476,5 +476,9 @@
     "zh": "中文",
     "ja": "日本語"
   },
-  "cta_header": "製品を見る"
+  "cta_header": "製品を見る",
+  "floatingCta": {
+    "button": "お問い合わせ",
+    "wechat": "WeChat"
+  }
 }
