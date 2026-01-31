@@ -102,6 +102,7 @@
     "title": "Health Center",
     "subtitle": "Evidence-based insights on liver health, nutrition science, and wellness strategies for modern lifestyles",
     "readMore": "Read more",
+    "viewAll": "View All Articles",
     "metaTitle": "Health Center - Liver Wellness Insights | LivBoss",
     "metaDescription": "Evidence-based articles on liver health, broccoli sprouts, detoxification, and wellness strategies for modern lifestyles.",
     "article": {
@@ -174,6 +175,7 @@
     "subtitle": "Choose your preferred platform based on your region",
     "ctaPrimary": "Contact us for purchase channels",
     "ctaSecondary": "Apply for partnership / distribution",
+    "additionalInfo": "More regions and platforms coming soon. For wholesale or distribution inquiries, please contact our team.",
     "marketplaces": {
       "sea": {
         "name": "Southeast Asia",

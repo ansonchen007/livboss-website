@@ -102,6 +102,7 @@
     "title": "健康中心",
     "subtitle": "基于科学证据的肝脏健康、营养科学和现代生活方式的健康策略",
     "readMore": "阅读更多",
+    "viewAll": "查看全部文章",
     "metaTitle": "健康中心 - 肝脏养护知识 | 肝动力",
     "metaDescription": "基于科学证据的肝脏健康、西兰花芽、解毒排毒和现代生活方式的健康策略文章。",
     "article": {
@@ -174,6 +175,7 @@
     "subtitle": "根据您所在地区选择合适的购买平台",
     "ctaPrimary": "联系了解购买渠道",
     "ctaSecondary": "申请代理合作",
+    "additionalInfo": "更多地区和平台即将上线。如有批发或经销合作意向，欢迎联系我们的团队。",
     "marketplaces": {
       "sea": {
         "name": "东南亚地区",

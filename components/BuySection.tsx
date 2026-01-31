@@ -105,7 +105,7 @@ export default function BuySection() {
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-sm text-text-primary/60 max-w-2xl mx-auto leading-relaxed">
-            More regions and platforms coming soon. For wholesale or distribution inquiries, please contact our team.
+            {t('additionalInfo')}
           </p>
         </div>
       </div>
