@@ -31,7 +31,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: 'liver health, liver support, broccoli sprout, sulforaphane, 肝脏健康, 护肝, 西兰花芽, 肝パワー, ブロッコリースプラウト',
+    keywords: 'liver health, liver support, broccoli sprout, sulforaphane, hangover relief, liver protection, 西兰花芽, 保护肝脏, 醒酒, 护肝, 肝脏健康, 解酒, 熬夜护肝, 应酬, 肝パワー, ブロッコリースプラウト, 二日酔い対策',
     authors: [{name: 'LivBoss'}],
     openGraph: {
       title: metaTitle,
